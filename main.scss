@@ -1,0 +1,80 @@
+// $color-de-fondo: yellow;
+
+
+// body {
+//     background: $color-de-fondo;
+//     header {
+//         div {
+//             a {
+//                 text-decoration: none;
+//                 color: red;
+//             }
+//         }
+//     }
+// }
+
+body{
+    margin: 0;
+
+}
+.head-1{
+    font-family: Montserrat;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;/*PORQUE SIN WIDTH AL PONER POSITION FIXED EL HEADER SE ACHICA DE ANCHO?*/
+}
+nav{
+    display:flex;
+    justify-content: space-between;
+}
+
+a{
+    text-decoration: none;
+}
+.menu-principal{
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    width: 600px;
+}
+.logo-ada{
+    width: 67px;
+    height: 26px;
+}
+.ada{
+    width: 100%;
+    height: auto;
+}
+.logo-menu{
+    width: 50px;
+    height: 26px;
+    display: none;
+}
+.menu-desplegable{
+    width: 100%;
+    height: auto;
+   
+.menu-drop-down .menu-deep-drop-down{
+    display: none;
+}
+
+.menu-drop-down:hover{
+    display: block;
+   
+}
+.menu-deep-drop-down:hover{
+    display: block;
+}
+.img-1-banner{
+    width: 300px;
+    height: 200px;
+    float: right;
+}
+.imagen-banner{
+    width: 100%;
+    height: auto;
+}
+
+

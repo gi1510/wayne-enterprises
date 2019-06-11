@@ -1,0 +1,52 @@
+body {
+  margin: 0; }
+
+.head-1 {
+  font-family: Montserrat;
+  background-color: aquamarine;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%; }
+
+nav {
+  display: flex;
+  justify-content: space-between; }
+
+a {
+  text-decoration: none; }
+
+.menu-principal {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  width: 600px; }
+
+.logo-ada {
+  width: 67px;
+  height: 26px; }
+
+.ada {
+  width: 100%;
+  height: auto; }
+
+.logo-menu {
+  width: 50px;
+  height: 26px;
+  display: none; }
+
+.menu-desplegable {
+  width: 100%;
+  height: auto; }
+
+.menu-drop-down {
+  display: none; }
+
+.menu-deep-drop-down {
+  display: none; }
+
+a .menu-drop-down:hover {
+  display: block;
+  display: flex;
+  flex-direction: column;
+  color: cornflowerblue; }

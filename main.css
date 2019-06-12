@@ -1,13 +1,29 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:500,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
 body {
   margin: 0; }
+  body .head-1 nav div .menu-principal {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    width: 600px; }
+  body #seccion-1 {
+    background-color: #1445b3;
+    display: flex; }
+    body #seccion-1 .img-1-banner {
+      height: 800px; }
+      body #seccion-1 .img-1-banner .imagen-banner {
+        width: 100%;
+        height: auto; }
 
 .head-1 {
-  font-family: Montserrat;
-  background-color: aquamarine;
+  font-family: "Montserrat", sans-serif;
+  background-color: white;
   display: flex;
   justify-content: space-between;
   position: fixed;
-  width: 100%; }
+  width: 100%;
+  /*PORQUE SIN WIDTH AL PONER POSITION FIXED EL HEADER SE ACHICA DE ANCHO?*/ }
 
 nav {
   display: flex;
@@ -39,14 +55,11 @@ a {
   width: 100%;
   height: auto; }
 
-.menu-drop-down {
+.menu-drop-down .menu-deep-drop-down {
   display: none; }
 
-.menu-deep-drop-down {
-  display: none; }
+.menu-drop-down:hover {
+  display: block; }
 
-a .menu-drop-down:hover {
-  display: block;
-  display: flex;
-  flex-direction: column;
-  color: cornflowerblue; }
+.menu-deep-drop-down:hover {
+  display: block; }

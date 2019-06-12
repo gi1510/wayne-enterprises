@@ -1,25 +1,43 @@
-// $color-de-fondo: yellow;
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
-
-// body {
-//     background: $color-de-fondo;
-//     header {
-//         div {
-//             a {
-//                 text-decoration: none;
-//                 color: red;
-//             }
-//         }
-//     }
-// }
+$main-colour: #1445b3;
+$second-colour: #007bff;
+$background-colour: white;
+$main-font: "Montserrat", sans-serif;
+$second-font: "Open Sans", sans-serif;
 
 body{
     margin: 0;
+    .head-1 {
+        nav {
+            div{
+                .menu-principal{
+                    display: flex;
+                    justify-content: space-evenly;
+                    list-style: none;
+                    width: 600px;
+                }
+            }
 
+        }
+    }
+    #seccion-1 {
+        background-color:$main-colour;
+        display: flex;
+            .img-1-banner{
+                height: 800px;
+                .imagen-banner{
+                    width: 100%;
+                    height: auto;
+                }
+            }
+       
+    }
 }
 .head-1{
-    font-family: Montserrat;
-    background-color: aquamarine;
+    font-family: $main-font;
+    background-color: $background-colour;
     display: flex;
     justify-content: space-between;
     position: fixed;
@@ -55,7 +73,7 @@ a{
 .menu-desplegable{
     width: 100%;
     height: auto;
-   
+}   
 .menu-drop-down .menu-deep-drop-down{
     display: none;
 }
@@ -67,14 +85,3 @@ a{
 .menu-deep-drop-down:hover{
     display: block;
 }
-.img-1-banner{
-    width: 300px;
-    height: 200px;
-    float: right;
-}
-.imagen-banner{
-    width: 100%;
-    height: auto;
-}
-
-

@@ -7,29 +7,30 @@ body {
     justify-content: space-evenly;
     list-style: none;
     width: 600px; }
-  body #seccion-1 {
+  body .seccion-1 {
     background-color: #1445b3;
     padding-top: 10em;
     height: 550px;
     display: flex;
     justify-content: space-evenly;
     align-items: flex-start; }
-    body #seccion-1 .img-1-banner {
+    body .seccion-1 .img-1-banner {
       width: 500px;
       height: 400px; }
-      body #seccion-1 .img-1-banner .imagen-banner {
+      body .seccion-1 .img-1-banner .imagen-banner {
         width: 100%;
         height: auto; }
-    body #seccion-1 .info-banner {
+    body .seccion-1 .info-banner {
       color: #fff;
       font-size: 33px;
       font-weight: 700;
       font-family: "Montserrat", sans-serif;
       line-height: 27px; }
-      body #seccion-1 .info-banner .side-buttons {
+      body .seccion-1 .info-banner .side-buttons {
         display: flex;
-        justify-content: space-evenly; }
-        body #seccion-1 .info-banner .side-buttons a {
+        justify-content: space-evenly;
+        align-items: flex-start; }
+        body .seccion-1 .info-banner .side-buttons a {
           border: 2px solid white;
           border-radius: 30px;
           font-family: "Montserrat", sans-serif;
@@ -37,9 +38,122 @@ body {
           padding: 10px 32px;
           color: #fff;
           letter-spacing: 1px; }
-    body #seccion-1 h2:nth-child(2) {
+        body .seccion-1 .info-banner .side-buttons .boton-activo {
+          border-color: #007bff;
+          background-color: #007bff;
+          color: #fff; }
+        body .seccion-1 .info-banner .side-buttons .boton-activo:hover {
+          border-color: #fff;
+          background-color: #1445b3;
+          color: #fff; }
+        body .seccion-1 .info-banner .side-buttons .boton-inactivo {
+          border-color: #fff;
+          background-color: #1445b3;
+          color: #fff; }
+        body .seccion-1 .info-banner .side-buttons .boton-inactivo:hover {
+          border-color: #007bff;
+          background-color: #007bff;
+          color: #fff; }
+    body .seccion-1 h2:nth-child(2) {
       color: #74b5fc;
       text-decoration: underline; }
+  body .seccion-2 {
+    padding-top: 5em;
+    font-family: "Open Sans", sans-serif;
+    color: #283d50; }
+    body .seccion-2 header {
+      text-align: center;
+      font-weight: lighter;
+      line-height: 1px; }
+      body .seccion-2 header h3 {
+        font-size: 36px;
+        font-family: "Montserrat", sans-serif; }
+    body .seccion-2 .seccion-A {
+      /* cambiar a container*/
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center; }
+      body .seccion-2 .seccion-A div {
+        width: 50%; }
+      body .seccion-2 .seccion-A .side-text {
+        display: flex;
+        flex-direction: column;
+        text-align: justify; }
+        body .seccion-2 .seccion-A .side-text .icon-flex {
+          display: flex;
+          justify-content: flex-start; }
+          body .seccion-2 .seccion-A .side-text .icon-flex div {
+            width: 30px;
+            height: 30px;
+            border: solid 2px #007bff;
+            border-radius: 44px; }
+      body .seccion-2 .seccion-A .img-2 {
+        width: 600px;
+        height: 500px; }
+        body .seccion-2 .seccion-A .img-2 .imagen-2 {
+          width: 100%;
+          height: auto; }
+      body .seccion-2 .seccion-A h4 {
+        font-family: "Montserrat", sans-serif; }
+    body .seccion-2 .seccion-B {
+      display: flex;
+      justify-content: space-between;
+      text-align: justify; }
+      body .seccion-2 .seccion-B div {
+        width: 50%; }
+      body .seccion-2 .seccion-B .img-3 {
+        width: 500px;
+        height: 300px; }
+        body .seccion-2 .seccion-B .img-3 .imagen-3 {
+          width: 100%;
+          height: auto; }
+    body .seccion-2 .seccion-C {
+      display: flex;
+      justify-content: space-between;
+      text-align: justify; }
+      body .seccion-2 .seccion-C div {
+        width: 50%; }
+      body .seccion-2 .seccion-C .img-4 {
+        width: 500px;
+        height: 400px; }
+        body .seccion-2 .seccion-C .img-4 .imagen-4 {
+          width: 100%;
+          height: auto; }
+  body .seccion-3 {
+    padding-top: 5em;
+    font-family: "Open Sans", sans-serif;
+    color: #283d50;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    background-color: #ecf5ff; }
+    body .seccion-3 h3 {
+      font-size: 36px;
+      line-height: 22px; }
+    body .seccion-3 p {
+      font-size: 15px;
+      line-height: 14px; }
+    body .seccion-3 .contenedor {
+      display: flex;
+      justify-content: space-evenly;
+      text-align: justify; }
+      body .seccion-3 .contenedor box {
+        width: 25%;
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 32px;
+        margin: 30px 0px; }
+        body .seccion-3 .contenedor box p {
+          font-size: 14px;
+          line-height: 14px; }
+        body .seccion-3 .contenedor box h4 {
+          font-size: 18px;
+          font-family: "Montserrat", sans-serif; }
+  body .seccion-4 {
+    font-family: "Open Sans", sans-serif; }
+    body .seccion-4 header h4 {
+      font-family: "Montserrat", sans-serif; }
 
 .head-1 {
   font-family: "Montserrat", sans-serif;

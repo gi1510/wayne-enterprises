@@ -107,32 +107,46 @@ body{
                 }        
             .seccion-A{/* cambiar a container*/
                 display: flex;
-                justify-content: space-evenly;
+                justify-content: space-between;
                 align-items: center;
+                margin: 0px 70px;
                 div{
-                    width: 50%;
+                
                 }
                 .side-text{
                     display: flex;
                     flex-direction: column;
-                    text-align: justify;
+                    justify-content: space-evenly;
+                    width:50%;
                     
                     .icon-flex{
                         display: flex;
-                        justify-content: flex-start;
-                        div{
-                            width: 30px;
-                            height: 30px;
-                            border: solid 2px $second-colour;
-                            border-radius: 44px;
-                        }
+                        justify-content:space-between;
+                        align-items: center;
                         
+                        i{
+                            text-align: center;
+                            color: $second-colour;
+                            border: 2px solid $second-colour;
+                            border-radius: 41px;
+                            padding: 20px;
+                            font-size: xx-large;
+                            // reveer padding
+                            }
+                        div{
+                            padding-left: 12px;
+                            p h4{
+                                line-height: 12px;  
+                                // revisar!!!!!
+                            }
+                           
+                        }                       
                     }
 
                 }
                     
                 .img-2{
-                    width: 600px;
+                    width: 50%;
                     height: 500px;
                     .imagen-2{
                         width: 100%;
@@ -181,6 +195,7 @@ body{
     }
     .seccion-3{
         padding-top: 5em;
+        padding-bottom: 4em;
         font-family: $second-font;
         color: $letter-color;
         display: flex;
@@ -188,7 +203,8 @@ body{
         justify-content: space-around;
         text-align: center;
         background-color: #ecf5ff;
-
+        // box-shadow: 0 10px 29px 13 rgba(54, 190, 36, 0.1);
+        // transition: all 0.5s ease-in-out;
         h3{
             font-size: 36px;
             line-height: 22px;
@@ -198,37 +214,177 @@ body{
             line-height: 14px;
         }
         
-        .contenedor{
+        .row-wrap{
             display: flex;
             justify-content: space-evenly;
-            text-align: justify;
-            box{
-                
-                width: 25%;
-                background-color: #fff;
-                border-radius: 10px;
-                padding: 32px;
-                margin: 30px 0px;
-            
-                p{
-                    font-size: 14px;
-                    line-height: 14px;
+            text-align: left;
+            #column-wrap-1{
+                align-items: flex-end;
+                margin-right: 55px;
+            }
+            #col-wrap-2{
+                align-items: flex-start;
+                margin-left: 67px;
+            }
+            .column-wrap{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: flex-end;
+                .caja{
+                    width: 55%;
+                    background-color: #fff;
+                    border-radius: 10px;
+                    padding: 30px;
+                    margin: 30px 0px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    overflow: hidden;
+                    box-shadow: 0 10px 29px 13px rgba(54, 190, 36, 0.1);
+                    transition: all 0.5s ease-in-out;
 
+                    .analytics-icon{
+                        color: #ff689b;
+                        }
+                    .copy-icon{
+                        color: #3fcdc7;
+                        }
+                    .time-icon{
+                        color: #d6ff22;
+                        }
+                    .bookmark-icon{
+                        color: #e9bf06;
+                        }
+                    .speed-icon{
+                        color: #41cf2e;
+                        }
+                    .globe-icon{
+                        color: #4680ff;
+                        }
+                    ion-icon{
+                        
+                        position: relative;
+                        right: 50px;
+                        text-align: center;
+                        font-size: 64px;
+                        }
+                    
+                    p{
+                        font-size: 14px;
+                        line-height: 14px;
+                    }
+                    h4{
+                        font-size: 18px;
+                        font-family: $main-font;
+                    } 
+                    h4:hover{
+                    color: $main-colour;
+                    }              
                 }
-                h4{
-                    font-size: 18px;
-                    font-family: $main-font;
+                .caja:hover{
+                    transform: translateY(-5px);
+                    
                 }
             }
         }
     }
     .seccion-4{
+        background-color: $main-colour;
         font-family: $second-font;
+        font-size: 15px;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 5em 0em;
         header{
+            width: 50%;
+            text-align: center;
+            padding-bottom: 60px;
+            p{
+                padding: 0px 40px;
+            }
             h4{
+                font-size: 36px;
                 font-family: $main-font;
+                
             }
         }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width:80%;
+            
+            .celda{
+                width:40%;
+                background-color: #00458ed0;
+                border-color: #00458f;
+                border-radius: 10px;
+                margin: 0 15px;
+                padding: 15px 0;
+                text-align: center;
+                color: #fff;
+                transition: 0.3s ease-in-out;
+                height: 100%;
+                i{
+                    font-size: 48px;
+                    color: #bfddfe;
+                    // font-weight: bold;
+                }
+                h5{
+                    font-size: 22px;
+                    font-weight: bold;
+                }
+                a{
+                    color: #fff;
+                    font-weight: bold;
+
+                }
+
+            }
+            .celda:hover{
+                background-color: #00457ec9;
+                a{
+                    padding-bottom: 3px;
+                    border-bottom: 2px solid #00457ec9;
+                    
+                }
+                a:hover{
+                    padding-bottom: 3px;
+                    border-bottom: 2px solid #fff;
+                    transition: 0.5s;
+
+                }
+            }
+        }
+        
+        .counter-row{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 70%;
+            .column{
+                width:30%;
+                // margin: 0px 30px;ver paddin margin
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                .card{
+                    text-align: center;
+                }
+                .counter-count{
+                    font-family: $main-font;
+                    font-size:48px;
+                    margin-bottom: 0px;
+                }
+                }
+            }
+            
+           
+        
     }
         
 }
@@ -288,3 +444,6 @@ a{
 .menu-deep-drop-down:hover{
     display: block;
 }
+// cuestiones a revisar:
+// los margenes que se dejan
+// los line height

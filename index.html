@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="main.css">
+    <script type="text/javascript" src="Untitled-1.js"></script>
     
     <title>Wayne Enterprises</title>
 </head>
@@ -84,21 +85,21 @@
                 
                 <div class="icon-flex">
                         
-                        <div> <i class="fas fa-shopping-bag"></i></div>
-                        <h4>Eiusmod Tempor</h4>
-                        <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>  
+                        <div><i class="fas fa-shopping-bag"></i></div>
+                        <div><h4>Eiusmod Tempor</h4>
+                        <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p></div>
                         
                 </div>
                 <div class="icon-flex">
                     
-                        <div><ion-icon name="analytics"></ion-icon></i></div>
-                        <h4>Magni Dolores</h4>
-                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>  
+                        <div><i class="far fa-image"></i></div>
+                        <div><h4>Magni Dolores</h4>
+                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p></div>  
                 </div>
                 <div class="icon-flex">
                         <div><i class="fas fa-chart-bar"></i></div>
-                        <h4>Dolor Sitema</h4>
-                        <p>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>  
+                        <div><h4>Dolor Sitema</h4>
+                        <p>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p></div>
                 </div>
             </div>
             <div class="img-2"><img src="./img/2nd-img.svg" alt="" class="imagen-2"></div>
@@ -140,43 +141,60 @@
             <p>Laudem latine persequeris id sed, ex fabulas delectus quo. No vel</p>
             <p> partiendo abhorreant vituperatoribus.</p>
         </div>
-        <div class="contenedor">
-            <box class="caja-1">
-                    <ion-icon name="analytics"></ion-icon>
-                <h4>Lorem Ipsum</h4>
-                <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
-            </box>
-            <box class="caja-2">
-                <div><i></i></div>
-                <h4>Dolor Sitema</h4>
-                <p>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata </p>
-            </box>
-        </div>
-        <div class="contenedor">    
-            <box class="caja-3">
-                <div><i></i></div>
-                <h4>Sed ut perspiciatis</h4>
-                <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
-                </box>          
-            <box class="caja-4">
-                <div><i></i></div>
-                <h4>Magni Dolores</h4>
-                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-            </box>   
-        </div>    
-        <div class="contenedor">   
-            <box class="caja-5">
-                <div><i></i></div>
-                <div>
-                    <h4>Nemo Enim</h4>
-                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
-                </div>
-            </box>
-            <box class="caja-6">
-                <div><i></i></div>                
-                <h4>Eiusmod Tempor</h4>
-                <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
-            </box>
+        <div class="row-wrap">
+            <div class="column-wrap" id="col-wrap-1">
+                <box class="caja">
+                    <div class="analytics-icon"><ion-icon name="analytics"></ion-icon></div>
+                    <div>
+                        <h4>Lorem Ipsum</h4>
+                        <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+                    </div>    
+                </box>
+                <box class="caja">
+                        <div class="copy-icon"><ion-icon name="copy"></ion-icon></div>
+                        <div>
+                            <h4>Sed ut perspiciatis</h4>
+                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+                        </div>
+                    
+                </box>
+            
+                    <box class="caja">
+                            <div class="globe-icon"><ion-icon name="globe"></ion-icon></div>   
+                           
+                            <div>
+                                <h4>Nemo Enim</h4>
+                                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+                            </div>
+                </box>  
+            </div>
+            <div class="column-wrap" id="col-wrap-2">  
+                
+                <!-- columnas con class dar margin para acercarlas -->
+                <box class="caja">
+                        <div class="bookmark-icon"><ion-icon name="bookmarks"></ion-icon></div>
+                        <div>
+                            <h4>Dolor Sitema</h4>
+                            <p>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata </p>
+                        </div>
+                </box>    
+            
+                <box class="caja">
+                    
+                        <div class="speed-icon"><ion-icon name="speedometer"></ion-icon></div>
+                        <div>
+                            <h4>Magni Dolores</h4>
+                            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                        </div>      
+                </box>
+                <box class="caja">
+                        <div class="time-icon"><ion-icon name="time"></ion-icon></div>    
+                    <div>
+                        <h4>Eiusmod Tempor</h4>
+                        <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
+                    </div>
+                </box>
+            </div>
         </div>
 </section>
 <section class="seccion-4" id="choose">
@@ -186,30 +204,60 @@
     </header>
 
     <div class="container">
-        <div class="celda-1">
-            <div><i class="icon ion-ios-analytics-outline"></i></div>
+        <div class="celda">
+            <div><i class="far fa-gem"></i></div>
             <h5>Corporis dolorem</h5>
             <p>Deleniti optio et nisi dolorem debitis. Aliquam nobis est temporibus sunt ab inventore officiis aut voluptatibus.</p>
-            <a href="">Read more </a>
+            <a href="#home">Read more </a>
         </div>
 
-        <div class="celda-2">
-            <div><i></i></div>
+        <div class="celda">
+            <div><i class="fas fa-language"></i></div>
             <h5>Voluptates dolores</h5>
             <p>Voluptates nihil et quis omnis et eaque omnis sint aut. Ducimus dolorum aspernatur.</p>
-            <a href="">Read more</a>
+            <a href="#home">Read more</a>
         </div>
-        <div class="celda-3">
-            <div><i></i></div>
+        <div class="celda">
+            <div><i class="far fa-object-group"></i></div>
             <h5>Eum ut aspernatur</h5>
             <p>Autem quod nesciunt eos ea aut amet laboriosam ab. Eos quis porro in non nemo ex. </p>
-            <a href="">Read more</a>
+            <a href="#home">Read more</a>
         </div>
     </div>  
     
-    <div class="contadores">
+    
+    <div class="counter-row">
+        
+        <div class="column">
+            <div class="card">
+                <h3 class="counter-count">274</h3>
+                <p>Clients</p>
+            </div>
+        </div>
+        
+        <div class="column">
+            <div class="card">
+                <h3 class="counter-count">421</h3>
+                <p>Projects</p>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <h3 class="counter-count">1,364</h3>
+                <p>Hours Of Support</p>
+            </div>
+        </div>
+        
+        <div class="column">
+            <div class="card">
+                <h3 class="counter-count">18</h3>
+                <p>Hard Workers</p>
+            </div>
+        </div>
+    </div>    
         <!-- aca van los contadores  ver de crearlos con una animacion en funcion del tiempo yhover....-->
-    </div>
+    
 </section>
 <section class="seccion-5" id="portfolio" >
     <header>
@@ -419,6 +467,6 @@
 
 </footer>
 <script src="https://unpkg.com/ionicons@4.5.9-1/dist/ionicons.js"></script>
-
+<script src="https://kit.fontawesome.com/cbb7c878db.js"></script>
 </body>
 </html>

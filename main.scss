@@ -1,87 +1,559 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:500,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
 $main-colour: #1445b3;
 $second-colour: #007bff;
+$light-colour: #ecf5ff;
+$light-font-colour:#eee;
 $background-colour: white;
 $main-font: "Montserrat", sans-serif;
 $second-font: "Open Sans", sans-serif;
 
+@mixin centrado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin tit-sub {
+    h4 {
+        font-family: $main-font;
+        font-size: 36px;
+        font-weight: 500;
+        text-align: center;
+        margin: 0 0 20px 0;
+    }
+    p {
+        font-family: $second-font;
+        font-size: 15px;
+        text-align: center;
+        margin: auto;
+        padding-bottom: 60px;
+    }
+}
+
+@mixin team-photo {
+    width: 255px;
+    height: 255px;
+    margin: 10px;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    border-radius: 50%;
+    opacity: 1;
+    box-sizing: border-box;
+    .overlay {
+        background: rgba(0, 62, 128, 0.7);
+        height: 100%;
+        color: #fff;
+        font-size: 24px;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        transform: translateY(255px);
+        transition: .3s ease;
+        opacity: 0;
+    }   
+}
+
 body{
     margin: 0;
-    .head-1 {
-        nav {
-            div{
-                .menu-principal{
+    .head-1 { /*no puedo ponerle padding , width 100% xq? */
+        font-family: $main-font;
+        background-color: $background-colour;
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        width: 100%;
+            a{
+            color: $main-colour;
+            }
+        .logo-ada{
+            width: 67px;
+            height: 26px;
+            .ada{
+                width: 100%;
+                height: auto;
+            }
+        }
+        .topnav {
+            overflow: hidden;
+            .logo-menu {
+                display: none;
+                width: 50px;
+                height: 26px;
+                }
+            }
+            .menu-principal{
+                display: flex;
+                list-style: none;
+                padding: 17px 0px;
+                font-size: 14px;
+                font-family: $main-font;
+                font-weight: 500;
+                color: $main-colour;
+                justify-content: space-evenly;
+                }
+                ul {
                     display: flex;
                     justify-content: space-evenly;
-                    list-style: none;
-                    width: 600px;
+                    padding: 0;
+                    #contact-margin {
+                        padding-right: 80px; 
+                    }                  
+                    li{
+                        overflow: hidden;
+                        padding: 0px 11.5px; 
+                        a {
+                            text-decoration: none;
+                        } 
+                        .menu-drop-down {
+                            display: none;
+                            position: absolute;
+                            font-size: 13px;
+                            width: 200px; //*porque no max-width*//
+                            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                            z-index: 1;
+                            li {
+                                float: none;
+                                background-color: $background-colour;
+                                color: black;
+                                padding: 12px 16px;
+                                text-decoration: none;
+                                display: block;
+                                text-align: left;
+                            }
+                            .menu-deep-drop-down {
+                                overflow: hidden;
+                                display: none;
+                                position: absolute;
+                                background-color: #f9f9f9;
+                                font-size: 13px;
+                                width: 200px;
+                                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                                z-index: 1;
+                                li:hover {
+                                    a {
+                                        color: $second-colour;
+                                    } 
+                                }
+                            }
+                        }
+                        .drop-down2:hover .menu-deep-drop-down {
+                            display: block;
+                            margin-left: 80px;
+                        }
+                    }
+                    li:hover .menu-drop-down {
+                        display: block;
+                    }
                 }
             }
 
-        }
-    }
-    #seccion-1 {
+    .seccion-1 {
         background-color:$main-colour;
         display: flex;
+        flex-direction: row;
+        height: 600px;
+        align-self: flex-end;
+            .info-banner {
+                width: 50%;
+                font-family: $main-font;
+                font-size: 48px;
+                font-weight: 700;
+                line-height: 1.2;
+                color: $background-colour;
+            }
             .img-1-banner{
-                height: 800px;
+                width: 50%;
                 .imagen-banner{
                     width: 100%;
                     height: auto;
                 }
-            }
-       
+            }       
     }
-}
-.head-1{
-    font-family: $main-font;
-    background-color: $background-colour;
-    display: flex;
-    justify-content: space-between;
-    position: fixed;
-    width: 100%;/*PORQUE SIN WIDTH AL PONER POSITION FIXED EL HEADER SE ACHICA DE ANCHO?*/
-}
-nav{
-    display:flex;
-    justify-content: space-between;
-}
 
-a{
-    text-decoration: none;
-}
-.menu-principal{
-    display: flex;
-    justify-content: space-evenly;
-    list-style: none;
-    width: 600px;
-}
-.logo-ada{
-    width: 67px;
-    height: 26px;
-}
-.ada{
-    width: 100%;
-    height: auto;
-}
-.logo-menu{
-    width: 50px;
-    height: 26px;
-    display: none;
-}
-.menu-desplegable{
-    width: 100%;
-    height: auto;
-}   
-.menu-drop-down .menu-deep-drop-down{
-    display: none;
-}
+    .testimonials {
+        @include centrado;
+        padding: 60px 0;
+        box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+        background-color: $light-colour;
+        .header{
+            @include centrado;
+            @include tit-sub;
+        } 
+        .carrousel {
+            display: flex;   
+            width: 730px;
+            height: 132px;
+            padding: 0;
+            overflow: hidden;
+            margin: 0 auto;
+            .opinion {
+            display: flex;
+            width: 730px;
+            flex-shrink: 0;
+            scroll-behavior: smooth;
+                .test-img {
+                    width: 125px;
+                    border: 4px solid #fff;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+                .test-info {
+                    padding: 10px;
+                    width: 80%;
+                    font-family: $second-font;
+                    line-height: 0;
+                }
+            }
+        }
+        .bullets {
+            display: flex;
+            .bullet-1 {
+                height: 30px;
+                width: 30px;
+            }
+        }
+    }
 
-.menu-drop-down:hover{
-    display: block;
-   
-}
-.menu-deep-drop-down:hover{
-    display: block;
+    .team{
+        @include centrado;
+        padding: 60px 0;
+        box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+        .header{
+            @include centrado;
+            @include tit-sub;
+        } 
+        .h4 {
+            font-family: $main-font;
+            font-weight: 700;
+            margin-bottom: 3px;
+            line-height: 0;
+            font-size: 18px;
+            color: #fff;
+        }
+        .text{
+            font-family: $second-font;
+            font-style: italic;
+            font-size: 13px;
+            color: #fff;
+        }
+        .social {
+            font-size: 18px;
+            margin: 10px;
+            a {
+                text-decoration: none;
+                margin: 3px;
+            }              
+            a:link {
+                color: white;
+            }              
+            a:visited {
+                color:white;
+            }              
+            a:hover {
+                color: $second-colour;
+            }
+        }
+        .galeria-batman {
+            display: flex;
+            .pic-1 {
+                background-image: url(https://newbiz-master-uqgespkghu.now.sh/img/team-01.jpg);
+                @include team-photo;
+            }
+            .pic-1:hover .overlay{
+                transform: translate(0px);
+                opacity: 1;
+            }
+            .pic-1:hover{
+                opacity: 0.9;        
+            }
+            .pic-2 {
+                background-image: url(https://newbiz-master-uqgespkghu.now.sh/img/team-02.jpg);
+                @include team-photo;
+            }
+            .pic-2:hover .overlay{
+                transform: translate(0px);
+                opacity: 1;
+            }
+            .pic-2:hover{
+                opacity: 0.9;        
+            }
+            .pic-3 {
+                background-image: url(https://newbiz-master-uqgespkghu.now.sh/img/team-03.jpg);
+                @include team-photo;
+            }
+            .pic-3:hover .overlay{
+                transform: translate(0px);
+                opacity: 1;
+            }
+            .pic-3:hover{
+                opacity: 0.9;        
+            }
+            .pic-4 {
+                background-image: url(https://newbiz-master-uqgespkghu.now.sh/img/team-04.jpg);
+                @include team-photo;
+            }
+            .pic-4:hover .overlay{
+                transform: translate(0px);
+                opacity: 1;
+            }
+            .pic-4:hover{
+                opacity: 0.9;        
+            }
+        }
+    }
+
+    .clients {
+        @include centrado;
+        background-color:$light-colour;
+        padding: 60px 0;
+        .header{
+            @include centrado;
+            @include tit-sub;
+        }
+        .fila {
+            display: flex;
+            .contenedor{
+                width: 277px;
+                background-color: white;
+                border: 0.5px solid $light-colour;
+                .logo-clientes{
+                    box-sizing: border-box;
+                    padding: 64px;
+                    height: 160px;
+                    display: flex;
+                    align-items: center;
+                    img {
+                        width: 100%;
+                        height: auto;
+                        transition: all 0.4s ease-in-out;
+                    }
+                    img:hover {
+                        transform: scale(1.2); 
+                    }
+                }
+            }
+        }
+    }
+    .contacto {
+        @include centrado;
+        padding: 60px 0;
+        .header{
+            @include centrado;
+            @include tit-sub;
+            padding-bottom: 30px;
+        } 
+        .mapa-formulario {
+            display: flex;
+            width: 100%;
+            .google-maps{
+                width: 50%;
+                padding: 0 15px;
+            }
+            .contacto {
+                width: 50%;
+                padding: 0 15px;
+                .datos-comerciales {
+                    ul {
+                        display: flex;
+                        list-style-type: none;
+                        margin: 0;
+                        padding: 0;
+                        font-family: $second-font;
+                        color: #283d50;
+                        li {
+                            padding: 0 20px 10px 0px;
+                            line-height: 28px;
+                            font-size: 14px;
+                            margin: 0 0 30px 0;
+                        }
+                        ion-icon {
+                            font-size: 28px;
+                            color: #007bff;
+                            float: left;
+                            line-height: 1;
+                            padding-right: 5px;
+                        }
+                    }
+                }
+                .formulario {
+                    box-sizing: border-box;
+                    width: 100%;
+                    form {
+                        display: flex;
+                        flex-direction: column;
+                        div {
+                            display: flex;
+                        }
+                        label{
+                            display: flex;
+                            margin: 10px 0;
+                            flex: 1;
+                            padding: 0 5px;
+                            .input-field {
+                                font-size: 14px;
+                                width: 100%;
+                                padding: .375rem .75rem;
+                                font-family: $second-font;
+                                border: 1px solid #ced4da;
+                            }
+                        }
+                        #text {
+                            padding: 5px;
+                            font-size: 14px;
+                            width: 100%;
+                            textarea{
+                                font-size: 14px;
+                                display: flex;
+                                flex: 1;
+                                margin-right: 10px;
+                                padding: .375rem .75rem ;
+                                font-family: $second-font;
+                                border: 1px solid #ced4da;
+                            }
+                        }
+                        #boton-send {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            .boton-send {
+                                background-color: $second-colour;
+                                color: white;
+                                padding: 8px 30px;
+                                border: none;
+                                border-radius: 20px;
+                                cursor: pointer;
+                                transition: 0.3s;
+                                font-size: 1rem;
+                                font-weight: 400;
+                                line-height: 1.5;
+                            }
+                        }
+                    }                    
+                }
+            }
+        }
+    }
+    .footer {
+        background-color: #004a99;
+        color: $light-font-colour;
+        padding: 30px 60px;
+        h3 {
+            font-family: $main-font;
+            font-weight: 400;
+            font-size: 34px;
+            text-transform: uppercase;
+            line-height:10px;
+        }
+        h5 {
+            font-family: $main-font;
+            font-weight: 700;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+        p, li{
+            font-family: $second-font;
+            font-size: 14px;
+        }
+        .top {
+            display: flex;
+            .wayne-text{
+                padding: 0px 15px;
+                width: 350px;
+                p {
+                    font-family: $main-font;
+                    line-height: 24px;
+                    font-size: 13px;
+                }
+            }
+            .useful-links{
+                padding: 0px 15px;
+                width: 160px;
+                    ul{
+                        list-style: none;
+                        padding: 0;
+                        margin: 0;
+                        a{
+                            color: white;
+                            text-decoration: none;
+                            li {
+                                padding: 8px 0
+                            }
+                        }
+                        a:hover {
+                            color: $second-colour;
+                        }
+                    }
+                }
+                .contact{
+                    padding: 0px 15px;
+                    width: 255px;
+                    line-height: 26px;
+                    .redes {
+                        display: flex;
+                        .icon {
+                            background-color: $second-colour;
+                            border: none;
+                            color: white;
+                            width: 36px;
+                            height: 36px;
+                            font-size: 18px;
+                            border-radius: 50%;
+                            margin-right: 4px;
+                            transition: 0.3s;
+                            a{
+                                color: white;
+                            }
+                        }
+                        .icon:hover {
+                            background-color: #0062cc;
+                        }
+                    }
+                }
+                .newsletter{
+                    padding: 0px 15px;
+                    width: 255px;
+                    line-height: 1.5;
+                    form {
+                        display: flex;
+                        #email {
+                            margin: 0;
+                        }
+                        #submit{                            
+                            background: #007bff;
+                            border: 0;
+                            width: 35%;
+                            padding: 6px 0;
+                            text-align: center;
+                            color: #fff;
+                            transition: 0.3s;
+                            cursor: pointer;
+                        }
+                        #submit:hover {
+                            background: #0062cc;
+                        }
+                    }
+                }
+            }
+    }
+    .footer-bottom {
+        @include centrado;
+        background-color: #00428a;
+        text-align: center;
+        margin: auto;
+        padding: 20px 0px;
+        p {
+            color: $light-font-colour;
+            font-family: $second-font;
+            font-size: 14px;
+        }
+    }
 }

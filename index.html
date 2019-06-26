@@ -11,16 +11,17 @@
 </head>
 
 <body>
-
     <!-- <----------ENCABEZADO----------------------> 
-    <header class="head-1">
-              
-           <div class="logo-ada"><img src="https://newbiz-master-uqgespkghu.now.sh/img/logo-tp.png" alt="logo ada" class="ada"></div>
-           
-         <nav>
-            <div class="logo-menu"><img class="menu-desplegable" alt="logo menu desplegable"></div>
-            <div>   
-                <ul class="menu-principal">
+    <header class="head-1">             
+        <div class="logo-ada">
+            <img src="https://newbiz-master-uqgespkghu.now.sh/img/logo-tp.png" alt="logo ada" class="ada">
+        </div>           
+        <nav class="topnav">
+            <div class="logo-menu">
+                <img class="menu-desplegable" alt="logo menu desplegable">
+            </div>
+            <div class="menu-principal">   
+                <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About Us</a></li>
                     <li><a href="#">Services</a></li>
@@ -29,7 +30,7 @@
                     <li><a href="#">Drop Down</a>
                         <ul class="menu-drop-down">
                             <li><a href="#">Drop Down 1</a></li>
-                            <li><a href="#">Drop Down 2</a>
+                            <li class="drop-down2"><a href="#">Drop Down 2</a>
                                 <ul class="menu-deep-drop-down">
                                     <li><a href="#">Deep Drop Down 1</a></li>
                                     <li><a href="#">Deep Drop Down 2</a></li>
@@ -43,29 +44,29 @@
                             <li><a href="#">Drop Down 5</a></li>
                         </ul>
                     </li>
-                    <li><a href='#'>Contact Us</a>
+                    <li id="contact-margin"><a href='#'>Contact Us</a>
                 </ul>
             </div>
-          </nav>
+        </nav>
     </header>
-<!-- <------------------------fin encabezado---------------------------> 
+<!-- <------------------------fin-encabezado---------------------------> 
 
-    <section id="seccion-1">
-        <div class="img-1-banner"><img src="" alt="" class="imagen-banner"></div>
+<!-- <------------------------banner---------------------------> 
+    <section class="seccion-1">
         <div class="info-banner">
-        <h2>We provide</h2>
-        <h2>solution</h2>
-        <h2>for your business!</h2>
-        <a href="#">get Started</a>
-        <a href="#">Our Services</a>
+            <p>We provide <br> <span style="color:blue"> solution</span> <br>for your business!</p> 
+            <button><a href="#">Get Started</a></button>
+            <button><a href="#">Our Services</a></button>
         </div>
+        <div class="img-1-banner"><img src="./img/intro-img.svg" alt="" class="imagen-banner"></div>
     </section>
-
+<!-- <------------------------banner---------------------------> 
+<!-- <------------------------about-us---------------------------> 
     <section class="seccion-2">
 
         <header>
-         <h2>About Us</h2>
-         <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h5>
+            <h2>About Us</h2>
+            <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h5>
         </header>
         <container class="seccion-A">
             <div class=""><img src="" alt="" class=""></div>
@@ -85,7 +86,6 @@
                     <h4>Dolor Sitema</h4>
                     <p>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>  
             </div>
-
         </container>
 
         <container class="seccion-B">
@@ -206,182 +206,267 @@
         <div class=""><img id="" src="" alt=""></div>
     </div>
 </section>
-
-<section class="seccion-6">
-    <header>Testimonials</header>
-    <div class="carrousel">
-        <div class="relato-1">
-            <div class><img src="" alt=""></div>
-            <h5></h5>
-            <h6></h6>
-            <p></p>
-        </div>
-
-        <div class="relato-2">
-                <div class><img src="" alt=""></div>
-                <h5></h5>
-                <h6></h6>
-                <p></p>
-        </div>
-
-         <div class="relato-3">
-            <div class><img src="" alt=""></div>
-            <h5></h5>
-            <h6></h6>
-            <p></p>
-        </div>      
-        
-        <div class="relato-4">
-                <div class><img src="" alt=""></div>
-                <h5></h5>
-                <h6></h6>
-                <p></p>
-        </div>
-
-         <div class="relato-5">
-            <div class><img src="" alt=""></div>
-            <h5></h5>
-            <h6></h6>
-            <p></p>
-        </div>     
-
-
+<!-- <------------------------team---------------------------> 
+<section class="testimonials">
+    <div class="header">
+        <h4>Testimonials</h4>
     </div>
-    <div class="botones">
-        <button></button>
-        <button></button>
-        <button></button>
-        <button></button>
-    </div>
-
+    <ul class="carrousel">
+        <li class="opinion" id="slide-1"> 
+            <div class="test-img"><img src="./img/testimonial-1.jpg" alt=""></div>
+            <div class="test-info">
+            <h3>Saul Goodman</h3>
+            <h4>Ceo & Founder</h4>
+            <p>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.</p>
+            </div>
+        </li>
+        <li class="opinion" id="slide-2"><div class="test-img"><img src="./img/testimonial-1.jpg" alt=""></div>
+            <div class="test-info">
+            <h3>Sara Wilson</h3>
+            <h4>Designer</h4>
+            <p>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.</p>
+            </div></li>
+        <li class="opinion"><div class="test-img"><img src="./img/testimonial-1.jpg" alt=""></div>
+            <div class="test-info">
+            <h3>Saul Goodman</h3>
+            <h4>Ceo & Founder</h4>
+            <p>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.</p>
+            </div></li>
+        <li class="opinion">
+            <div class="test-img"><img src="./img/testimonial-1.jpg" alt=""></div>
+            <div class="test-info">
+                <h3>Saul Goodman</h3>
+                <h4>Ceo & Founder</h4>
+                <p>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.</p>
+            </div>
+        </li>
+    </ul>
+    <ul class="bullets">
+        <li class="bullet-1">
+            <a href="#slide-1">1</a>
+        </li>
+        <li class="bullet-1"> 
+            <a href="#slide-2">2</a>
+        </li>
+        <li class="bullet-1">
+            <a href="#"></a>
+        </li>
+        <li class="bullet-1">
+            <a href="#"></a>
+        </li>
+    </ul>
 </section>
-
-<section class="seccion-7">
-<header>
-    <h4>Team</h4>
-    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
-
-</header>
-
-<div class="galeria-batman">
-    <div class="pic-1"><img src="" alt="Ben Affleck" class="foto-1"></div>
-    <div class="pic-2"><img src="" alt="Christian Bale" class="foto-2"></div>
-    <div class="pic-3"><img src="" alt="Michael Keaton" class="foto-3"></div>
-    <div class="pic-4"><img src="" alt="Adam West" class="foto-4"></div>
-
-</div>
     
-</section>
-
-<section class="seccion-8">
-    <header>
-        <h4>Our Clients</h4>
-        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque dere santome nida.</p>
-    </header>
-    <div class="fila-a">
-        <div class="logo-clientes"><img src="" alt="Logo myob" class="cliente" ></div>
-        <div class="logo-clientes"><img src="" alt="Logo Belimo" class="cliente" ></div>
-        <div class="logo-clientes"><img src="" alt="Logo Life Groups" class="life-groups" ></div>
-        <div class="logo-clientes"><img src="" alt="Logo Lilly" class="cliente" ></div>
-    </div>
-    <div class="fila-b">
-        <div class="logo-clientes"><img src="" alt="Logo Citrus" class="cliente" ></div>
-        <div class="logo-clientes"><img src="" alt="Logo Trustly" class="cliente" ></div>
-        <div class="logo-clientes"><img src="" alt="Logo Oldendorff" class="cliente" ></div>
-        <div class="logo-clientes"><img src="" alt="Logo Grabyo" class="cliente" ></div>
-    </div>
-</section>
-<section class="seccion-9">
-    <header>Contact Us</header>
-    <div class="google-maps"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11770.128280783902!2d-74.00608075783875!3d40.70955609211109!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a2945b81%3A0x1293cf6040eb9402!2s157+William+St%2C+New+York%2C+NY+10038%2C+EE.+UU.!5e0!3m2!1ses-419!2sar!4v1560150602826!5m2!1ses-419!2sar" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe></div>
-
-    <div class="contacto">
-        <div class="datos-comerciales">
-            <ul>
-                <li><div><i></i></div>A108 Adam Street, NY 535022</li>
-                <li><div><i></i></div>info@example.com</li>
-                <li><div><i></i></div>+1 5589 55488 55</li>
-            </ul>
+<!-- <------------------------team---------------------------> 
+    <section class="team">
+        <div class="header">
+            <h4>Team</h4>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium <br>sdoloremque</p>
         </div>
-        <form>
+        <div class="galeria-batman">
+            <div class="pic-1">
+                <div class="overlay">
+                    <div class="info">
+                        <h4 class="h4">Ben Affleck</h4>
+                        <span class="text">Product Manager</span>
+                        <div class="social">
+                            <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+                            <a href="www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pic-2">
+                <div class="overlay">
+                    <div class="info">
+                        <h4 class="h4">Cristian Bale</h4>
+                        <span class="text">Product Manager</span>
+                        <div class="social">
+                            <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+                            <a href="www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pic-3">
+                <div class="overlay">
+                    <div class="info">
+                        <h4 class="h4">Michael Keaton</h4>
+                        <span class="text">CTO</span>
+                        <div class="social">
+                            <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+                            <a href="www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pic-4">
+                <div class="overlay">
+                    <div class="info">
+                        <h4 class="h4">Adam West</h4>
+                        <span class="text">Accountant</span>
+                        <div class="social">
+                            <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+                            <a href="www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </section>
+<!-- <------------------------our-clients---------------------------> 
+    <section class="clients">
+        <div class="header">
+            <h4>Our Clients</h4>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantiums<br> doloremque dere santome nida.</p>
+        </div>
+        <div class="fila">
+            <div class="contenedor"> 
+                <div class="logo-clientes">
+                    <img src="./img/clients/client-1.png" alt="Logo myob" class="cliente" >
+                </div>
+            </div>
+            <div class="contenedor">
+                <div class="logo-clientes">
+                    <img src="./img/clients/client-2.png" alt="Logo Belimo" class="cliente" >
+                </div>
+            </div>
+            <div class="contenedor">
+                <div class="logo-clientes">
+                    <img src="./img/clients/client-3.png" alt="Logo Life Groups" class="life-groups" >
+                </div>
+            </div>
+            <div class="contenedor"> 
+                <div class="logo-clientes">
+                    <img src="./img/clients/client-4.png" alt="Logo Lilly" class="cliente" >
+                </div>
+            </div>
+        </div>
+        <div class="fila">
+            <div class="contenedor">
+                <div class="logo-clientes">
+                    <img src="./img/clients/client-5.png" alt="Logo Citrus" class="cliente" >
+                </div>
+            </div>
+            <div class="contenedor">
+                <div class="logo-clientes">
+                    <img src="./img/clients/client-6.png" alt="Logo Trustly" class="cliente" >
+                </div>
+            </div>
+            <div class="contenedor">
+                <div class="logo-clientes">
+                    <img src="./img/clients/client-7.png" alt="Logo Oldendorff" class="cliente" >
+                </div>
+            </div>
+            <div class="contenedor">
+                <div class="logo-clientes">
+                    <img src="./img/clients/client-8.png" alt="Logo Grabyo" class="cliente" >
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- <------------------------fin-clients---------------------------> 
+<!-- <------------------------contacto---------------------------> 
+    <section class="contacto">
+        <div class="header">
+            <h4>Contact Us</h4>
+        </div>
+        <div class="mapa-formulario">
+            <div class="google-maps">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48389.11820898724!2d-74.001678!3d40.710974!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1ses-419!2sbg!4v1560713973066!5m2!1ses-419!2sbg" frameborder="0" style="border:0; width:100%; height:312px" allowfullscreen></iframe>
+            </div>
+            <div class="contacto">
+                <div class="datos-comerciales">
+                    <ul>
+                        <li><span><ion-icon name="pin"></ion-icon></span>A108 Adam Street, NY 535022</li>
+                        <li><span><ion-icon name="mail"></ion-icon></span>info@example.com</li>
+                        <li><span><ion-icon name="call"></ion-icon></span>+1 5589 55488 55</li>
+                    </ul>
+                </div>
                 <div class="formulario">
-
-
-
-                        <form>
-                      
-                            <label for="name">
-                    
-                              <input type="text" placeholder="Your Name" class="input-field" name="name"/>
-                            </label>
-                                
-                            <label for="email">
-                    
-                              <input type="email" placeholder="Your Email" class="input-field" name="email" value="" />
-                            </label>
-                      
+                    <form> 
+                        <div>                       
+                            <label for="name">                        
+                                <input type="text" placeholder="Your Name" class="input-field" name="name"/>
+                            </label>                                    
+                            <label for="email">                        
+                                <input type="email" placeholder="Your Email" class="input-field" name="email" value="" />
+                            </label>  
+                        </div>
+                        <div>                      
                             <label for="text">
-                      
-                              <input type="text" class="input-field" name="text" value="" placeholder="Subject"/>
+                                <input type="text" class="input-field" name="text" value="" placeholder="Subject"/>
                             </label>
-                      
-                            <textarea name="textarea" rows="10" cols="50">Message</textarea>
-                            
-                            <button>Send Message</button>
-
-
-        </form>
+                        </div> 
+                        <div id="text">
+                            <textarea name="textarea" rows="5" cols="50" placeholder="Message"></textarea>
+                        </div>
+                        <label id="boton-send">
+                            <input type="submit" value="Send Message" class="boton-send"/>
+                        </label>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- <------------------------fin-contacto--------------------------->
+<!-- <------------------------footer--------------------------->
+    <footer class="footer"> 
+        <div class="top">
+            <div class="wayne-text">
+                <h3>Wayne</h3>
+                <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus. Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat mauris nunc congue.</p>
+            </div>
+            <div class="useful-links">
+                <h5>Useful Links</h5>
+                <ul>    
+                    <a href="#"><li>Home</li></a>
+                    <a href="#"><li>About Us</li></a>
+                    <a href="#"><li>Services</li></a>
+                    <a href="#"><li>Terms of Service</li></a>
+                    <a href="#"><li>Privacy Policy</li></a>
+                </ul>
+            </div>
+            <div class="contact">
+                <h5>contact us</h5>
+                <p>A108 Adam Street<br>
+                New York, NY 535022<br>
+                United States<br>
+                Phone: +1 5589 55488 55<br>
+                Email: info@example.com</p>
+                <div class="redes">    
+                    <button class="icon"><a href="https://twitter.com/"><i class="fab fa-google-plus-g"></i></a></button>
+                    <button class="icon"><a href="www.facebook.com"><i class="fab fa-google-plus-g"></i></a></button>
+                    <button class="icon"><a href="https://www.instagram.com"><i class="fab fa-google-plus-g"></i></a></button>
+                    <button class="icon"><a href="https://www.google.com"><i class="fab fa-google-plus-g"></i> </a></button>
+                    <button class="icon"><a href="https://ar.linkedin.com/"><i class="fab fa-linkedin"></i></a></button>
+                </div>
+            </div>
+            <div class="newsletter">
+                <h5>OUR NEWSLETTER</h5>
+                <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna veniam enim veniam illum dolore legam minim quorum culpa amet magna export quem marada parida nodela caramase seza.</p>
+                <form action="" method="post">
+                    <input type="email" name="email" id="email">
+                    <input type="submit" value="Subscribe" id="submit">
+                </form>
+            </div>
+        </div>
+    </footer>
+    <div class="footer-bottom">  
+        <p>          
+            © Copyright <strong> Wayne Enterprises</strong>. All Rights Reserved <br>
+            Designed by ...
+        </p>
     </div>
-
-
-</section>
-
-<footer>
-    <div class="top">
-        <div class="wayne-text">
-            <h3>Wayne</h3>
-            <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus. Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat mauris nunc congue.</p>
-        </div>
-        <div class="Useful Links">
-            <h5>Useful Links</h5>
-            <ul>
-                <li>Home</li>
-                <li>About us</li>
-                <li>Services</li>
-                <li>Terms of Service</li>
-                <li>Privacy policy</li>
-            </ul>
-        </div>
-        <div class="contact">
-            <h5>contact us</h5>
-            <p>A108 Adam Street<br>
-            New York, NY 535022<br>
-            United States<br>
-            Phone: +1 5589 55488 55<br>
-            Email: info@example.com</p>
-            <div class="redes">    
-            <a href="https://twitter.com/"><i class="fab fa-twitter-square icon"></i></a>
-            <a href="www.facebook.com"><i class="fab fa-facebook icon"></i></a>
-            <a href="https://www.instagram.com"><i class="fab fa-instagram icon"></i></a>
-            <a href="https://www.google.com"><i class="fab fa-google-plus-g"></i> </a>
-            <a href="https://ar.linkedin.com/"><i class="fab fa-linkedin"></i></a>
-        </div>
-
-
-
-        <div class="newsletter">
-            <h5>OUR NEWSLETTER</h5>
-            <P>Tamen quem nulla quae legam multos aute sint culpa legam noster magna veniam enim veniam illum dolore legam minim quorum culpa amet magna export quem marada parida nodela caramase seza.</P>
-        </div>
-    </div>
-    <div class="bottom">
-        
-        © Copyright <STRONG> Wayne Enterprises</STRONG>. All Rights Reserved
-        Designed by ...
-
-    </div>
-
-</footer>
-
+<!-- <------------------------fin.footer--------------------------->
+<script src="https://unpkg.com/ionicons@4.5.9-1/dist/ionicons.js"></script>
 </body>
 </html>

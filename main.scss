@@ -565,15 +565,50 @@ body{
         }
         .section-2{
             .seccion-A{
-                display: block;
+                // display: block;
+                display: flex;
+                flex-direction: column-reverse;
+                align-items: start;
                 max-width: 700px;
                 margin: 0 auto;
                 .imagen-2{
                     width: 100%;
                     height: auto;
-
                 }
             }
+            .seccion-B{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                max-width: 700px;
+                margin: 0 auto;
+                // display: block;
+                .imagen-3{ 
+                width: 100%;
+                height: auto;
+                }
+            }
+            .seccion-C{
+                display: flex;
+                flex-direction: column-reverse;
+                align-items: center;
+                max-width: 700px;
+                margin: 0 auto;
+                .imagen-4{
+                    width: 100%;
+                    height: auto;
+
+                }
+
+            }
+// cierre ecci2
+        }
+        .seccion-3{
+            .row-wrap{
+            max-width: 700px;
+            margin: 0 auto;
+        }
+// cierre sec3
         }
        
 // cierre@    

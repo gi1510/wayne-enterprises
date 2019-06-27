@@ -411,12 +411,35 @@ body {
       max-width: 700px;
       margin: 0 auto; }
     body .section-2 .seccion-A {
-      display: block;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: start;
       max-width: 700px;
       margin: 0 auto; }
       body .section-2 .seccion-A .imagen-2 {
         width: 100%;
-        height: auto; } }
+        height: auto; }
+    body .section-2 .seccion-B {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 700px;
+      margin: 0 auto; }
+      body .section-2 .seccion-B .imagen-3 {
+        width: 100%;
+        height: auto; }
+    body .section-2 .seccion-C {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      max-width: 700px;
+      margin: 0 auto; }
+      body .section-2 .seccion-C .imagen-4 {
+        width: 100%;
+        height: auto; }
+    body .seccion-3 .row-wrap {
+      max-width: 700px;
+      margin: 0 auto; } }
 
 .head-1 {
   font-family: "Montserrat", sans-serif;

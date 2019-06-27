@@ -333,9 +333,18 @@ body {
         margin: auto;
         padding-bottom: 60px; }
     body .clients .fila {
-      display: flex; }
+      max-width: 1140px;
+      width: 100%;
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-right: auto;
+      margin-left: auto;
+      box-sizing: border-box;
+      display: flex;
+      flex-wrap: wrap; }
       body .clients .fila .contenedor {
         width: 277px;
+        box-sizing: border-box;
         background-color: white;
         border: 0.5px solid #ecf5ff; }
         body .clients .fila .contenedor .logo-clientes {
@@ -378,51 +387,54 @@ body {
       body .contacto .mapa-formulario .google-maps {
         width: 50%;
         padding: 0 15px; }
-      body .contacto .mapa-formulario .contacto {
+      body .contacto .mapa-formulario .contacto-formulario {
         width: 50%;
         padding: 0 15px; }
-        body .contacto .mapa-formulario .contacto .datos-comerciales ul {
+        body .contacto .mapa-formulario .contacto-formulario .datos-comerciales ul {
           display: flex;
           list-style-type: none;
           margin: 0;
           padding: 0;
           font-family: "Open Sans", sans-serif;
           color: #283d50; }
-          body .contacto .mapa-formulario .contacto .datos-comerciales ul li {
+          body .contacto .mapa-formulario .contacto-formulario .datos-comerciales ul li {
             padding: 0 20px 10px 0px;
             line-height: 28px;
             font-size: 14px;
             margin: 0 0 30px 0; }
-          body .contacto .mapa-formulario .contacto .datos-comerciales ul ion-icon {
+          body .contacto .mapa-formulario .contacto-formulario .datos-comerciales ul ion-icon {
             font-size: 28px;
             color: #007bff;
             float: left;
             line-height: 1;
             padding-right: 5px; }
-        body .contacto .mapa-formulario .contacto .formulario {
+        body .contacto .mapa-formulario .contacto-formulario .formulario {
           box-sizing: border-box;
           width: 100%; }
-          body .contacto .mapa-formulario .contacto .formulario form {
+          body .contacto .mapa-formulario .contacto-formulario .formulario form {
             display: flex;
             flex-direction: column; }
-            body .contacto .mapa-formulario .contacto .formulario form div {
+            body .contacto .mapa-formulario .contacto-formulario .formulario form .name-email {
               display: flex; }
-            body .contacto .mapa-formulario .contacto .formulario form label {
+            body .contacto .mapa-formulario .contacto-formulario .formulario form .form-text {
+              display: flex; }
+            body .contacto .mapa-formulario .contacto-formulario .formulario form label {
               display: flex;
               margin: 10px 0;
               flex: 1;
               padding: 0 5px; }
-              body .contacto .mapa-formulario .contacto .formulario form label .input-field {
+              body .contacto .mapa-formulario .contacto-formulario .formulario form label .input-field {
                 font-size: 14px;
                 width: 100%;
                 padding: .375rem .75rem;
                 font-family: "Open Sans", sans-serif;
                 border: 1px solid #ced4da; }
-            body .contacto .mapa-formulario .contacto .formulario form #text {
+            body .contacto .mapa-formulario .contacto-formulario .formulario form #text {
               padding: 5px;
               font-size: 14px;
-              width: 100%; }
-              body .contacto .mapa-formulario .contacto .formulario form #text textarea {
+              width: 100%;
+              display: flex; }
+              body .contacto .mapa-formulario .contacto-formulario .formulario form #text textarea {
                 font-size: 14px;
                 display: flex;
                 flex: 1;
@@ -430,11 +442,11 @@ body {
                 padding: .375rem .75rem;
                 font-family: "Open Sans", sans-serif;
                 border: 1px solid #ced4da; }
-            body .contacto .mapa-formulario .contacto .formulario form #boton-send {
+            body .contacto .mapa-formulario .contacto-formulario .formulario form #boton-send {
               display: flex;
               flex-direction: column;
               align-items: center; }
-              body .contacto .mapa-formulario .contacto .formulario form #boton-send .boton-send {
+              body .contacto .mapa-formulario .contacto-formulario .formulario form #boton-send .boton-send {
                 background-color: #007bff;
                 color: white;
                 padding: 8px 30px;
@@ -447,8 +459,7 @@ body {
                 line-height: 1.5; }
   body .footer {
     background-color: #004a99;
-    color: #eee;
-    padding: 30px 60px; }
+    color: #eee; }
     body .footer h3 {
       font-family: "Montserrat", sans-serif;
       font-weight: 400;
@@ -464,7 +475,16 @@ body {
       font-family: "Open Sans", sans-serif;
       font-size: 14px; }
     body .footer .top {
-      display: flex; }
+      max-width: 1140px;
+      width: 100%;
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-right: auto;
+      margin-left: auto;
+      box-sizing: border-box;
+      box-sizing: border-box;
+      display: flex;
+      padding: 60px 0 30px 0; }
       body .footer .top .wayne-text {
         padding: 0px 15px;
         width: 350px; }
@@ -537,3 +557,64 @@ body {
       color: #eee;
       font-family: "Open Sans", sans-serif;
       font-size: 14px; }
+  @media only screen and (max-width: 768px) {
+    body .team .galeria-batman {
+      flex-wrap: wrap; }
+    body .clients .fila {
+      max-width: 720px;
+      padding-right: 15px;
+      padding-left: 15px;
+      box-sizing: border-box;
+      display: flex;
+      flex-wrap: wrap;
+      margin-right: auto;
+      margin-left: auto; }
+      body .clients .fila .contenedor {
+        max-width: 33%; }
+    body .contacto .mapa-formulario {
+      flex-direction: column; }
+      body .contacto .mapa-formulario .google-maps {
+        width: auto; }
+      body .contacto .mapa-formulario .contacto-formulario {
+        width: auto; }
+        body .contacto .mapa-formulario .contacto-formulario .datos-comerciales {
+          display: flex;
+          flex-wrap: wrap; }
+      body .contacto .mapa-formulario .formulario form .name-email {
+        flex-direction: column; }
+        body .contacto .mapa-formulario .formulario form .name-email label {
+          margin: 5px 0; }
+      body .contacto .mapa-formulario .formulario form .form-text label {
+        margin: 5px 0; }
+    body .footer {
+      flex-direction: column;
+      align-items: center;
+      padding: 0; }
+      body .footer .top {
+        max-width: 720px;
+        padding-right: 15px;
+        padding-left: 15px;
+        box-sizing: border-box;
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: auto;
+        margin-left: auto; }
+        body .footer .top .wayne-text {
+          width: 45%;
+          padding: 0px 15px 0px 0px; }
+          body .footer .top .wayne-text h3 {
+            margin-block-start: 12px;
+            line-height: 0px; }
+        body .footer .top .useful-links h5 {
+          margin-block-start: 0; }
+        body .footer .top .contact {
+          width: 45%;
+          padding: 0px 15px 0px 0px; } }
+  @media only screen and (max-width: 360px) {
+    body .team .galeria-batman {
+      flex-wrap: wrap; }
+    body .clients .fila {
+      flex-wrap: wrap; }
+    body .footer .top {
+      display: flex;
+      flex-wrap: wrap; } }

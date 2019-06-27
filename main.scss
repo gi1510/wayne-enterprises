@@ -58,6 +58,22 @@ $second-font: "Open Sans", sans-serif;
     }   
 }
 
+@mixin container-lg {
+    max-width: 1140px;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    box-sizing: border-box;
+}
+@mixin container-mid {
+    max-width: 720px;
+    padding-right: 15px;
+    padding-left: 15px;
+    box-sizing: border-box;
+}
+
 body{
     margin: 0;
     .head-1 { /*no puedo ponerle padding , width 100% xq? */
@@ -320,9 +336,12 @@ body{
             @include tit-sub;
         }
         .fila {
+            @include container-lg;
             display: flex;
+            flex-wrap: wrap;
             .contenedor{
                 width: 277px;
+                box-sizing: border-box;
                 background-color: white;
                 border: 0.5px solid $light-colour;
                 .logo-clientes{
@@ -358,7 +377,7 @@ body{
                 width: 50%;
                 padding: 0 15px;
             }
-            .contacto {
+            .contacto-formulario {
                 width: 50%;
                 padding: 0 15px;
                 .datos-comerciales {
@@ -390,7 +409,10 @@ body{
                     form {
                         display: flex;
                         flex-direction: column;
-                        div {
+                        .name-email {
+                            display: flex;
+                        }
+                        .form-text {
                             display: flex;
                         }
                         label{
@@ -410,6 +432,7 @@ body{
                             padding: 5px;
                             font-size: 14px;
                             width: 100%;
+                            display: flex;
                             textarea{
                                 font-size: 14px;
                                 display: flex;
@@ -445,7 +468,6 @@ body{
     .footer {
         background-color: #004a99;
         color: $light-font-colour;
-        padding: 30px 60px;
         h3 {
             font-family: $main-font;
             font-weight: 400;
@@ -464,7 +486,10 @@ body{
             font-size: 14px;
         }
         .top {
+            @include container-lg;
+            box-sizing: border-box;
             display: flex;
+            padding: 60px 0 30px 0;
             .wayne-text{
                 padding: 0px 15px;
                 width: 350px;
@@ -556,4 +581,104 @@ body{
             font-size: 14px;
         }
     }
+
+    @media only screen and (max-width: 768px) {
+        .team {
+            .galeria-batman {
+                flex-wrap: wrap;
+            }
+        }
+        .clients {
+            .fila {
+                @include container-mid;
+                display: flex;
+                flex-wrap: wrap;
+                margin-right: auto;
+                margin-left: auto;
+                .contenedor {
+                    max-width: 33%;
+                }
+            }
+        }
+        .contacto {
+            .mapa-formulario{
+                flex-direction: column;
+                .google-maps {
+                    width: auto;
+                }
+                .contacto-formulario{
+                    width: auto;
+                    .datos-comerciales{
+                        display: flex;
+                        flex-wrap: wrap;
+                    }
+                }
+                .formulario {
+                    form {
+                        .name-email {
+                            flex-direction: column;
+                            label {
+                                margin: 5px 0;
+                            }
+                        }
+                        .form-text {
+                            label {
+                                margin: 5px 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .footer {
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            .top {
+                @include container-mid;
+                display: flex;
+                flex-wrap: wrap;
+                margin-right: auto;
+                margin-left: auto;
+                .wayne-text {
+                    width: 45%;
+                    padding: 0px 15px 0px 0px;
+                    h3 {
+                        margin-block-start: 12px;
+                        line-height: 0px;
+                    }
+                }
+                .useful-links {
+                    h5 {
+                        margin-block-start: 0;
+                    }
+                }
+                .contact {
+                    width: 45%;
+                    padding: 0px 15px 0px 0px;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 360px) {
+        .team {
+            .galeria-batman {
+                flex-wrap: wrap;
+            }
+        }
+        .clients {
+            .fila {
+                flex-wrap: wrap;
+            }
+        }
+        .footer {
+            .top {
+                display: flex;
+                flex-wrap: wrap;
+            }
+        }
+    }
 }
+
+

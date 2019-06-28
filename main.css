@@ -79,7 +79,7 @@ body {
     body .section-2 .section-2-header {
       text-align: center;
       margin-bottom: 48px; }
-      body .section-2 .section-2-header .title-head {
+      body .section-2 .section-2-header .title-head-2 {
         font-size: 36px;
         font-family: "Montserrat", sans-serif; }
     body .section-2 .seccion-A {
@@ -107,7 +107,7 @@ body {
           body .section-2 .seccion-A .side-text .icon-flex .text-icon {
             padding-left: 12px;
             font-size: 14px; }
-            body .section-2 .seccion-A .side-text .icon-flex .text-icon .title-h4 {
+            body .section-2 .seccion-A .side-text .icon-flex .text-icon .title-h4-2 {
               font-size: 18px;
               font-family: "Montserrat", sans-serif; }
         body .section-2 .seccion-A .side-text .icon-flex:hover .icon-seccion-A {
@@ -224,10 +224,10 @@ body {
             right: 50px;
             text-align: center;
             font-size: 64px; }
-          body .seccion-3 .row-wrap .column-wrap .caja p {
+          body .seccion-3 .row-wrap .column-wrap .caja .p-icon {
             font-size: 14px;
             line-height: 14px; }
-          body .seccion-3 .row-wrap .column-wrap .caja h4 {
+          body .seccion-3 .row-wrap .column-wrap .caja .h4-icon {
             font-size: 18px;
             font-family: "Montserrat", sans-serif; }
         body .seccion-3 .row-wrap .column-wrap .caja:hover {
@@ -247,7 +247,7 @@ body {
       width: 50%;
       text-align: center;
       padding-bottom: 60px; }
-      body .seccion-4 header p {
+      body .seccion-4 header .p-header-s4 {
         padding: 0px 40px; }
       body .seccion-4 header .title-head {
         font-size: 36px;
@@ -269,23 +269,23 @@ body {
         color: #fff;
         transition: 0.3s ease-in-out;
         height: 100%; }
-        body .seccion-4 .container .celda i {
+        body .seccion-4 .container .celda .container-celda-i {
           font-size: 48px;
           color: #bfddfe; }
-        body .seccion-4 .container .celda h5 {
+        body .seccion-4 .container .celda .container-celda-h5 {
           font-size: 22px;
           font-weight: bold; }
-        body .seccion-4 .container .celda p {
+        body .seccion-4 .container .celda .container-celda-p {
           padding: 25px 48px; }
-        body .seccion-4 .container .celda a {
+        body .seccion-4 .container .celda .container-celda-link {
           color: #fff;
           font-weight: bold; }
       body .seccion-4 .container .celda:hover {
         background-color: #00457ec9; }
-        body .seccion-4 .container .celda:hover a {
+        body .seccion-4 .container .celda:hover .container-celda-link {
           padding-bottom: 3px;
           border-bottom: 2px solid #00457ec9; }
-        body .seccion-4 .container .celda:hover a:hover {
+        body .seccion-4 .container .celda:hover .container-celda-link:hover {
           padding-bottom: 3px;
           border-bottom: 2px solid #fff;
           transition: 0.5s; }
@@ -352,46 +352,44 @@ body {
       flex-flow: wrap;
       align-items: center;
       justify-content: space-between; }
-      body .seccion-5 .galeria-row-wrap .img-s5 {
-        width: 350px;
-        height: 250px;
-        margin-bottom: 53px;
-        overflow: hidden;
-        border-radius: 9px; }
-        body .seccion-5 .galeria-row-wrap .img-s5 .img-portfolio {
-          width: 100%;
-          height: auto; }
-      body .seccion-5 .galeria-row-wrap .img-s5-info {
-        width: 350px;
-        height: 250px;
-        border-radius: 9px;
-        position: relative;
-        background-color: #00458f59;
-        top: -25px;
-        left: -350px;
-        display: flex;
-        flex-flow: wrap;
-        align-items: center;
-        opacity: 0; }
-        body .seccion-5 .galeria-row-wrap .img-s5-info .contain {
-          max-width: 100px;
-          margin: 0 auto;
-          text-align: center; }
-          body .seccion-5 .galeria-row-wrap .img-s5-info .contain .tittle-info {
+      body .seccion-5 .galeria-row-wrap .contenedor-galeria {
+        background-color: #41cf2e; }
+        body .seccion-5 .galeria-row-wrap .contenedor-galeria .img-s5 {
+          width: 350px;
+          height: 250px;
+          margin-bottom: 53px;
+          overflow: hidden;
+          border-radius: 9px; }
+          body .seccion-5 .galeria-row-wrap .contenedor-galeria .img-s5 .img-portfolio {
+            width: 100%;
+            height: auto; }
+        body .seccion-5 .galeria-row-wrap .contenedor-galeria .img-s5-info {
+          width: 350px;
+          height: 250px;
+          border-radius: 9px;
+          position: relative;
+          background-color: #00458f59;
+          top: -25px;
+          left: -350px;
+          display: flex;
+          flex-flow: wrap;
+          align-items: center;
+          opacity: 0; }
+          body .seccion-5 .galeria-row-wrap .contenedor-galeria .img-s5-info .tittle-info {
             color: white;
             font-family: "Montserrat", sans-serif;
             font-size: 22px;
             font-weight: 700; }
-            body .seccion-5 .galeria-row-wrap .img-s5-info .contain .tittle-info .a-tittle {
+            body .seccion-5 .galeria-row-wrap .contenedor-galeria .img-s5-info .tittle-info .a-tittle {
               color: white; }
-            body .seccion-5 .galeria-row-wrap .img-s5-info .contain .tittle-info .a-tittle:hover {
+            body .seccion-5 .galeria-row-wrap .contenedor-galeria .img-s5-info .tittle-info .a-tittle:hover {
               color: #007bff;
               transition: 0.2S; }
-          body .seccion-5 .galeria-row-wrap .img-s5-info .contain .p-info {
+          body .seccion-5 .galeria-row-wrap .contenedor-galeria .img-s5-info .p-info {
             color: #e2effe;
             font-weight: 500;
             font-size: 14px; }
-          body .seccion-5 .galeria-row-wrap .img-s5-info .contain .i-box {
+          body .seccion-5 .galeria-row-wrap .contenedor-galeria .img-s5-info .i-box {
             width: 2px;
             height: 2px;
             color: #fff;
@@ -399,12 +397,12 @@ body {
             border-radius: 50%;
             padding: 5px 7px;
             margin: 6px; }
-          body .seccion-5 .galeria-row-wrap .img-s5-info .contain .i-box:hover {
+          body .seccion-5 .galeria-row-wrap .contenedor-galeria .img-s5-info .i-box:hover {
             background-color: #007bff9f;
             transition: 0.2s; }
-      body .seccion-5 .galeria-row-wrap .img-s5-info:hover {
-        opacity: 100; }
-  @media only screen and (max-width: 768px) {
+        body .seccion-5 .galeria-row-wrap .contenedor-galeria .img-s5-info:hover {
+          opacity: 100; }
+  @media (max-width: 768px) {
     body .section-1 .section-1-container {
       display: block;
       text-align: center;

@@ -688,6 +688,90 @@ body{
             }
         }
     }
+    .section-2{
+        max-width: 330px;
+        margin: 0 auto;
+        .seccion-A{
+            .img-2{
+                width: 330px;
+                height: 250px;
+            }
+// hacer mixin de img y ver de poner el mismo class en todas las resolciones
+        }
+        .seccion-B{
+            .img-3{
+                width: 330px;
+                height: 250px;
+            }
+        }    
+        .seccion-C{
+            .imagen-4{
+                // ver no toma tama;o del div
+                width: 330px;
+                height: 250px;
+            }
+        }
+        // cierresexion2?
+    }
+    .seccion-3{
+        .row-wrap{
+            display: block;
+            max-width: 330px;
+            margin: 0 auto;
+            height: auto;
+            .column-wrap{
+                display: block;
+            }
+            #col-wrap-2{
+                margin: 0px;
+            }
+        }
+
+        // cierre sec 3
+    }
+    .section-4{
+        .choose-container{
+            max-width: 330px;
+            margin: 0 auto;
+        }
+    
+    // es el text align   ++????ver tama;o de titulochoose y su p
+        //   cierre4
+
+    }
+    .seccion-5{
+        max-width: 330px;
+        margin: 0 auto;
+        header{
+            .menu-portfolio{
+                .menu-button{
+                    list-style: none;
+                    // cambiar tama;o de los botones ul
+                    margin: 0 4px;
+                    .little-button-all{
+                        text-decoration: none;
+                       
+                    }
+                }
+            }
+        }
+        .galeria-row-wrap{
+            .contenedor-galeria{  
+                width: 330px;
+                height: 250px;
+                .img-s5{
+                    width: 330px;
+                    height: 250px;
+                }
+                .img-s5-info{
+                    width: 330px;
+                    height: 250px;
+                }
+            
+            }
+        }
+    }
+
     
 }
 

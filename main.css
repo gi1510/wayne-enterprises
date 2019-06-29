@@ -481,7 +481,7 @@ body {
         align-items: center; }
         body .section-1 .section-1-container .info-banner .side-buttons .boton-inactivo {
           margin-top: 33px;
-          margin-left: 22px; }
+          margin-left: -23px; }
       body .section-1 .section-1-container .img-1-banner {
         width: 100%; }
     body .section-2 {
@@ -493,6 +493,8 @@ body {
       body .section-2 .seccion-B .img-3 {
         width: 330px;
         height: 250px; }
+      body .section-2 .title-side-text .parrafo-sec {
+        padding-left: 0px; }
       body .section-2 .seccion-C .imagen-4 {
         width: 330px;
         height: 250px; }
@@ -525,54 +527,3 @@ body {
         body .seccion-5 .galeria-row-wrap .contenedor-galeria .img-s5-info {
           width: 330px;
           height: 250px; } }
-
-.head-1 {
-  font-family: "Montserrat", sans-serif;
-  background-color: white;
-  display: flex;
-  justify-content: space-between;
-  position: fixed;
-  width: 100%;
-  /*PORQUE SIN WIDTH AL PONER POSITION FIXED EL HEADER SE ACHICA DE ANCHO?*/ }
-
-nav {
-  display: flex;
-  justify-content: space-between; }
-
-a {
-  text-decoration: none; }
-
-.menu-principal {
-  display: flex;
-  justify-content: space-evenly;
-  list-style: none;
-  width: 600px; }
-
-.logo-ada {
-  width: 67px;
-  height: 26px; }
-
-.ada {
-  width: 100%;
-  height: auto; }
-
-.logo-menu {
-  width: 50px;
-  height: 26px;
-  display: none; }
-
-.menu-desplegable {
-  width: 100%;
-  height: auto; }
-
-.menu-drop-down {
-  display: none; }
-
-.menu-deep-drop-down {
-  display: none; }
-
-.menu-drop-down:hover {
-  display: block; }
-
-.menu-deep-drop-down:hover {
-  display: block; }

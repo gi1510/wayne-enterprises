@@ -679,7 +679,7 @@ body{
                     align-items: center;
                     .boton-inactivo{
                         margin-top: 33px;
-                        margin-left: 22px;
+                        margin-left: -23px;
                     }
                 }
             }
@@ -703,7 +703,13 @@ body{
                 width: 330px;
                 height: 250px;
             }
-        }    
+        }   
+            .title-side-text{ 
+                .parrafo-sec{
+                     padding-left: 0px;
+
+                 } 
+            }
         .seccion-C{
             .imagen-4{
                 // ver no toma tama;o del div
@@ -802,63 +808,61 @@ body{
 
 
 
-.head-1{
-    font-family: $main-font;
-    background-color: $background-colour;
-    display: flex;
-    justify-content: space-between;
-    position: fixed; 
-    width: 100%;/*PORQUE SIN WIDTH AL PONER POSITION FIXED EL HEADER SE ACHICA DE ANCHO?*/
-}
-nav{
-    display:flex;
-    justify-content: space-between;
-}
+// .head-1{
+//     font-family: $main-font;
+//     background-color: $background-colour;
+//     display: flex;
+//     justify-content: space-between;
+//     position: fixed; 
+//     width: 100%;/*PORQUE SIN WIDTH AL PONER POSITION FIXED EL HEADER SE ACHICA DE ANCHO?*/
+// }
+// nav{
+//     display:flex;
+//     justify-content: space-between;
+// }
 
-a{
-    text-decoration: none;
-}
-.menu-principal{
-    display: flex;
-    justify-content: space-evenly;
-    list-style: none;
-    width: 600px;
-}
-.logo-ada{
-    width: 67px;
-    height: 26px;
-}
-.ada{
-    width: 100%;
-    height: auto;
-}
-.logo-menu{
-    width: 50px;
-    height: 26px;
-    display: none;
-}
-.menu-desplegable{
-    width: 100%;
-    height: auto;
-}   
-.menu-drop-down{
-    display: none;
-} 
+// a{
+//     text-decoration: none;
+// }
+// .menu-principal{
+//     display: flex;
+//     justify-content: space-evenly;
+//     list-style: none;
+//     width: 600px;
+// }
+// .logo-ada{
+//     width: 67px;
+//     height: 26px;
+// }
+// .ada{
+//     width: 100%;
+//     height: auto;
+// }
+// .logo-menu{
+//     width: 50px;
+//     height: 26px;
+//     display: none;
+// }
+// .menu-desplegable{
+//     width: 100%;
+//     height: auto;
+// }   
+// .menu-drop-down{
+//     display: none;
+// } 
 
 
-.menu-deep-drop-down{
-    display: none;
-}
+// .menu-deep-drop-down{
+//     display: none;
+// }
 
-.menu-drop-down:hover{
-    display: block;
+// .menu-drop-down:hover{
+//     display: block;
    
-}
-.menu-deep-drop-down:hover{
-    display: block;
-}
-// cuestiones a revisar:
-// los margenes que se dejan
-// los line height
-
-   
+// }
+// .menu-deep-drop-down:hover{
+//     display: block;
+// }
+// // cuestiones a revisar:
+// // los margenes que se dejan
+// // los line height

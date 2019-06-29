@@ -12,60 +12,62 @@
 
 <body>
     <!-- <----------ENCABEZADO----------------------> 
-    <header class="head-1">             
+    <header class="head-1">           
         <div class="logo-ada">
             <img src="https://newbiz-master-uqgespkghu.now.sh/img/logo-tp.png" alt="logo ada" class="ada">
         </div>           
         <nav class="topnav">
             <div class="logo-menu">
-                <img class="menu-desplegable" alt="logo menu desplegable">
+                <label for="menuToggle" class="menu-icon"><i class="fas fa-bars topnav-bars"></i></label>
             </div>
             <div class="menu-principal">   
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Team</a></li>
-                    <li><a href="#">Drop Down</a>
+                <ul class="menu-ul">
+                    <li class="menu-li"><a href="#" class="menu-a">Home</a></li>
+                    <li class="menu-li"><a href="#" class="menu-a">About Us</a></li>
+                    <li class="menu-li"><a href="#" class="menu-a">Services</a></li>
+                    <li class="menu-li"><a href="#" class="menu-a">Portfolio</a></li>
+                    <li class="menu-li"><a href="#" class="menu-a">Team</a></li>
+                    <li class="menu-li"><a href="#" class="menu-a">Drop Down <i class="fas fa-chevron-down icon-drop"></i></a>
                         <ul class="menu-drop-down">
-                            <li><a href="#">Drop Down 1</a></li>
-                            <li class="drop-down2"><a href="#">Drop Down 2</a>
+                            <li class="menu-drop"><a href="#" class="menu-a">Drop Down 1</a></li>
+                            <li class="drop-down2" ><a href="#" class="menu-a">Drop Down 2</a>
                                 <ul class="menu-deep-drop-down">
-                                    <li><a href="#">Deep Drop Down 1</a></li>
-                                    <li><a href="#">Deep Drop Down 2</a></li>
-                                    <li><a href="#">Deep Drop Down 3</a></li>
-                                    <li><a href="#">Deep Drop Down 4</a></li>
-                                    <li><a href="#">Deep Drop Down 5</a></li>
+                                    <li class="menu-drop"><a href="#" class="menu-a">Deep Drop Down 1</a></li>
+                                    <li class="menu-drop"><a href="#" class="menu-a">Deep Drop Down 2</a></li>
+                                    <li class="menu-drop"><a href="#" class="menu-a">Deep Drop Down 3</a></li>
+                                    <li class="menu-drop"><a href="#" class="menu-a">Deep Drop Down 4</a></li>
+                                    <li class="menu-drop"><a href="#" class="menu-a">Deep Drop Down 5</a></li>
                                 </ul>
                             </li>            
-                            <li><a href="#">Drop Down 3</a></li>
-                            <li><a href="#">Drop Down 4</a></li>
-                            <li><a href="#">Drop Down 5</a></li>
+                            <li class="menu-drop"><a href="#" class="menu-a">Drop Down 3</a></li>
+                            <li class="menu-drop"><a href="#" class="menu-a">Drop Down 4</a></li>
+                            <li class="menu-drop"><a href="#" class="menu-a">Drop Down 5</a></li>
                         </ul>
                     </li>
-                    <li id="contact-margin"><a href='#'>Contact Us</a>
+                    <li class="contact-margin"><a href='#' class="menu-a">Contact Us</a></li>
                 </ul>
             </div>
-        </nav>
+        </nav>   
     </header>
-<!-- <------------------------fin-encabezado---------------------------> 
+<!-- <------------------------fin encabezado--------------------------->  
 
-<!-- <------------------------banner---------------------------> 
-    <section class="seccion-1">
+    <section id="seccion-1">
         <div class="info-banner">
-            <p>We provide <br> <span style="color:blue"> solution</span> <br>for your business!</p> 
-            <button><a href="#">Get Started</a></button>
-            <button><a href="#">Our Services</a></button>
+            <h2>We provide</h2>
+            <h2>solutions</h2>
+            <h2>for your business!</h2>
+            <div class="side-buttons">    
+                <a href="#about">Get Started</a>
+                <a href="#">Our Services</a>
+            </div>
         </div>
-        <div class="img-1-banner"><img src="./img/intro-img.svg" alt="" class="imagen-banner"></div>
+        <div class="img-1-banner"><img src="#" alt="" class="imagen-banner"></div>
     </section>
 <!-- <------------------------banner---------------------------> 
 <!-- <------------------------about-us---------------------------> 
     <section class="seccion-2">
-
         <header>
-            <h2>About Us</h2>
+            <h2 id="about">About Us</h2>
             <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h5>
         </header>
         <container class="seccion-A">
@@ -207,73 +209,88 @@
     </div>
 </section>
 <!-- <------------------------team---------------------------> 
-<section class="testimonials">
-    <div class="header">
-        <h4>Testimonials</h4>
-    </div>
-    <ul class="carrousel">
-        <li class="opinion" id="slide-1"> 
-            <div class="test-img"><img src="./img/testimonial-1.jpg" alt=""></div>
-            <div class="test-info">
-            <h3>Saul Goodman</h3>
-            <h4>Ceo & Founder</h4>
-            <p>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.</p>
-            </div>
-        </li>
-        <li class="opinion" id="slide-2"><div class="test-img"><img src="./img/testimonial-1.jpg" alt=""></div>
-            <div class="test-info">
-            <h3>Sara Wilson</h3>
-            <h4>Designer</h4>
-            <p>Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.</p>
-            </div></li>
-        <li class="opinion"><div class="test-img"><img src="./img/testimonial-1.jpg" alt=""></div>
-            <div class="test-info">
-            <h3>Jena Karlis</h3>
-            <h4>Store Owner</h4>
-            <p>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.</p>
-            </div></li>
-        <li class="opinion">
-            <div class="test-img"><img src="./img/testimonial-1.jpg" alt=""></div>
-            <div class="test-info">
-                <h3>Saul Goodman</h3>
-                <h4>Ceo & Founder</h4>
-                <p>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.</p>
-            </div>
-        </li>
-    </ul>
-    <ul class="bullets">
-        <li class="bullet-1">
-            <a href="#slide-1">1</a>
-        </li>
-        <li class="bullet-1"> 
-            <a href="#slide-2">2</a>
-        </li>
-        <li class="bullet-1">
-            <a href="#"></a>
-        </li>
-        <li class="bullet-1">
-            <a href="#"></a>
-        </li>
-    </ul>
-</section>
+    <section class="testimonials">
+        <div class="header">
+            <h4 class="h4-header">Testimonials</h4>
+        </div>
+        <ul class="carrousel">
+            <li class="opinion" id="slide-1"> 
+                <div class="test-img"><img src="./img/testimonial-1.jpg" alt="" class="t-img">></div>
+                <div class="test-info">
+                <h3 class="carr-h3">Saul Goodman</h3>
+                <h4 class="carr-h4">Ceo & Founder</h4>
+                <p class="carr-p">Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.</p>
+                </div>
+            </li>
+            <li class="opinion" id="slide-2">
+                <div class="test-img"><img src="./img/testimonial-2.jpg" alt="" class="t-img"></div>
+                <div class="test-info">
+                <h3 class="carr-h3">Sara Wilson</h3>
+                <h4 class="carr-h4">Designer</h4>
+                <p class="carr-p">Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.</p>
+                </div>
+            </li>
+            <li class="opinion" id="slide-3">
+                <div class="test-img"><img src="./img/testimonial-3.jpg" alt="" class="t-img"></div>
+                <div class="test-info">
+                <h3 class="carr-h3">Jena Karlis</h3>
+                <h4 class="carr-h4">Store Owner</h4>
+                <p class="carr-p">Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.</p>
+                </div>
+            </li>
+            <li class="opinion" id="slide-4">
+                <div class="test-img"><img src="./img/testimonial-4.jpg" alt="" class="t-img"></div>
+                <div class="test-info">
+                    <h3 class="carr-h3">Matt Brandon</h3>
+                    <h4 class="carr-h4">Freelancer</h4>
+                    <p class="carr-p">Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.</p>
+                </div>
+            </li>
+            <li class="opinion" id="slide-5">
+                <div class="test-img"><img src="./img/testimonial-5.jpg" alt="" class="t-img"></div>
+                <div class="test-info">
+                    <h3 class="carr-h3">John Larson</h3>
+                    <h4 class="carr-h4">Entrepeneur</h4>
+                    <p class="carr-p">Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.</p>
+                </div>
+            </li>
+        </ul>
+        <ul class="bullets">
+            <li class="bullet-1">
+                <a href="#slide-1" class="bull-a"><i class="fas fa-circle fas-bull"></i></a>
+            </li>
+            <li class="bullet-1"> 
+                <a href="#slide-2" class="bull-a"><i class="fas fa-circle fas-bull"></i></a>
+            </li>
+            <li class="bullet-1">
+                <a href="#slide-3" class="bull-a"><i class="fas fa-circle fas-bull"></i></a>
+            </li>
+            <li class="bullet-1">
+                <a href="#slide-4" class="bull-a"><i class="fas fa-circle fas-bull"></i></a>
+            </li>
+            <li class="bullet-1">
+                <a href="#slide-5" class="bull-a"><i class="fas fa-circle fas-bull"></i></a>
+            </li>
+        </ul>
+    </section>
     
 <!-- <------------------------team---------------------------> 
     <section class="team">
         <div class="header">
-            <h4>Team</h4>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium <br>sdoloremque</p>
+            <h4 class="h4-header">Team</h4>
+            <p class="p-header">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium <br>sdoloremque</p>
         </div>
         <div class="galeria-batman">
             <div class="pic-1">
                 <div class="overlay">
                     <div class="info">
-                        <h4 class="h4">Ben Affleck</h4>
-                        <span class="text">Product Manager</span>
+                        <h4 class="h4-gal">Ben Affleck</h4>
+                        <span class="text-gal">Product Manager</span>
                         <div class="social">
-                            <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
-                            <a href="www.facebook.com"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-google-plus-g"></i></a>
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://twitter.com/" class="a-gal"><i class="fab fa-twitter"></i></a>
+                            <a href="www.facebook.com" class="a-gal"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="a-gal"><i class="fab fa-google-plus-g"></i></a>
+                            <a href="#" class="a-gal"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
                 </div>
@@ -281,13 +298,13 @@
             <div class="pic-2">
                 <div class="overlay">
                     <div class="info">
-                        <h4 class="h4">Cristian Bale</h4>
-                        <span class="text">Product Manager</span>
+                        <h4 class="h4-gal">Cristian Bale</h4>
+                        <span class="text-gal">Product Manager</span>
                         <div class="social">
-                            <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
-                            <a href="www.facebook.com"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-google-plus-g"></i></a>
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://twitter.com/" class="a-gal"><i class="fab fa-twitter"></i></a>
+                            <a href="www.facebook.com" class="a-gal"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="a-gal"><i class="fab fa-google-plus-g"></i></a>
+                            <a href="#" class="a-gal"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
                 </div>
@@ -295,13 +312,13 @@
             <div class="pic-3">
                 <div class="overlay">
                     <div class="info">
-                        <h4 class="h4">Michael Keaton</h4>
-                        <span class="text">CTO</span>
+                        <h4 class="h4-gal">Michael Keaton</h4>
+                        <span class="text-gal">CTO</span>
                         <div class="social">
-                            <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
-                            <a href="www.facebook.com"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-google-plus-g"></i></a>
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://twitter.com/" class="a-gal"><i class="fab fa-twitter"></i></a>
+                            <a href="www.facebook.com" class="a-gal"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="a-gal"><i class="fab fa-google-plus-g"></i></a>
+                            <a href="#" class="a-gal"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
                 </div>
@@ -309,13 +326,13 @@
             <div class="pic-4">
                 <div class="overlay">
                     <div class="info">
-                        <h4 class="h4">Adam West</h4>
-                        <span class="text">Accountant</span>
+                        <h4 class="h4-gal">Adam West</h4>
+                        <span class="text-gal">Accountant</span>
                         <div class="social">
-                            <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
-                            <a href="www.facebook.com"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-google-plus-g"></i></a>
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://twitter.com/" class="a-gal"><i class="fab fa-twitter"></i></a>
+                            <a href="www.facebook.com" class="a-gal"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="a-gal"><i class="fab fa-google-plus-g"></i></a>
+                            <a href="#" class="a-gal"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
                 </div>
@@ -325,48 +342,48 @@
 <!-- <------------------------our-clients---------------------------> 
     <section class="clients">
         <div class="header">
-            <h4>Our Clients</h4>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantiums<br> doloremque dere santome nida.</p>
+            <h4 class="h4-header">Our Clients</h4>
+            <p class="p-header">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantiums<br> doloremque dere santome nida.</p>
         </div>
         <div class="fila">
             <div class="contenedor"> 
                 <div class="logo-clientes">
-                    <img src="./img/clients/client-1.png" alt="Logo myob" class="cliente" >
+                    <img src="./img/clients/client-1.png" alt="Logo myob" class="img-clientes" >
                 </div>
             </div>
             <div class="contenedor">
                 <div class="logo-clientes">
-                    <img src="./img/clients/client-2.png" alt="Logo Belimo" class="cliente" >
+                    <img src="./img/clients/client-2.png" alt="Logo Belimo" class="img-clientes" >
                 </div>
             </div>
             <div class="contenedor">
                 <div class="logo-clientes">
-                    <img src="./img/clients/client-3.png" alt="Logo Life Groups" class="life-groups" >
+                    <img src="./img/clients/client-3.png" alt="Logo Life Groups" class="img-clientes" >
                 </div>
             </div>
             <div class="contenedor"> 
                 <div class="logo-clientes">
-                    <img src="./img/clients/client-4.png" alt="Logo Lilly" class="cliente" >
+                    <img src="./img/clients/client-4.png" alt="Logo Lilly" class="img-clientes" >
                 </div>
             </div>
             <div class="contenedor">
                 <div class="logo-clientes">
-                    <img src="./img/clients/client-5.png" alt="Logo Citrus" class="cliente" >
+                    <img src="./img/clients/client-5.png" alt="Logo Citrus" class="img-clientes" >
                 </div>
             </div>
             <div class="contenedor">
                 <div class="logo-clientes">
-                    <img src="./img/clients/client-6.png" alt="Logo Trustly" class="cliente" >
+                    <img src="./img/clients/client-6.png" alt="Logo Trustly" class="img-clientes" >
                 </div>
             </div>
             <div class="contenedor">
                 <div class="logo-clientes">
-                    <img src="./img/clients/client-7.png" alt="Logo Oldendorff" class="cliente" >
+                    <img src="./img/clients/client-7.png" alt="Logo Oldendorff" class="img-clientes" >
                 </div>
             </div>
             <div class="contenedor">
                 <div class="logo-clientes">
-                    <img src="./img/clients/client-8.png" alt="Logo Grabyo" class="cliente" >
+                    <img src="./img/clients/client-8.png" alt="Logo Grabyo" class="img-clientes" >
                 </div>
             </div>
         </div>
@@ -375,7 +392,7 @@
 <!-- <------------------------contacto---------------------------> 
     <section class="contacto">
         <div class="header">
-            <h4>Contact Us</h4>
+            <h4 class="h4-header">Contact Us</h4>
         </div>
         <div class="mapa-formulario">
             <div class="google-maps">
@@ -383,31 +400,31 @@
             </div>
             <div class="contacto-formulario">
                 <div class="datos-comerciales">
-                    <ul>
-                        <li><span><ion-icon name="pin"></ion-icon></span>A108 Adam Street, NY 535022</li>
-                        <li><span><ion-icon name="mail"></ion-icon></span>info@example.com</li>
-                        <li><span><ion-icon name="call"></ion-icon></span>+1 5589 55488 55</li>
+                    <ul class="datos-comerciales-ul">
+                        <li class="datos-comerciales-li"><span><ion-icon name="pin" class="ion-icon"></ion-icon></span>A108 Adam Street, NY 535022</li>
+                        <li class="datos-comerciales-li"><span><ion-icon name="mail" class="ion-icon"></ion-icon></span>info@example.com</li>
+                        <li class="datos-comerciales-li"><span><ion-icon name="call" class="ion-icon"></ion-icon></span>+1 5589 55488 55</li>
                     </ul>
                 </div>
                 <div class="formulario">
-                    <form> 
+                    <form class="formulario-form"> 
                         <div class="name-email">                       
-                            <label for="name">                        
+                            <label for="name" class="formulario-label">                        
                                 <input type="text" placeholder="Your Name" class="input-field" name="name"/>
                             </label>                                    
-                            <label for="email">                        
+                            <label for="email" class="formulario-label">                        
                                 <input type="email" placeholder="Your Email" class="input-field" name="email" value="" />
                             </label>  
                         </div>
                         <div class="form-text">                      
-                            <label for="text">
+                            <label for="text" class="formulario-label">
                                 <input type="text" class="input-field" name="text" value="" placeholder="Subject"/>
                             </label>
                         </div> 
-                        <div id="text">
-                            <textarea name="textarea" rows="5" cols="50" placeholder="Message"></textarea>
+                        <div class="formu-textarea">
+                            <textarea name="textarea" rows="5" cols="50" placeholder="Message" class="formulario-textarea"></textarea>
                         </div>
-                        <label id="boton-send">
+                        <label class="form-botonsend">
                             <input type="submit" value="Send Message" class="boton-send"/>
                         </label>
                     </form>
@@ -420,46 +437,46 @@
     <footer class="footer"> 
         <div class="top">
             <div class="wayne-text">
-                <h3>Wayne</h3>
-                <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus. Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat mauris nunc congue.</p>
+                <h3 class="footer-h3">Wayne</h3>
+                <p class="footer-p">Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus. Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat mauris nunc congue.</p>
             </div>
             <div class="useful-links">
-                <h5>Useful Links</h5>
-                <ul>    
-                    <a href="#"><li>Home</li></a>
-                    <a href="#"><li>About Us</li></a>
-                    <a href="#"><li>Services</li></a>
-                    <a href="#"><li>Terms of Service</li></a>
-                    <a href="#"><li>Privacy Policy</li></a>
+                <h5 class="footer-h5">Useful Links</h5>
+                <ul class="footer-ul">    
+                    <a href="#" class="footer-a"><li class="footer-li">Home</li></a>
+                    <a href="#" class="footer-a"><li class="footer-li">About Us</li></a>
+                    <a href="#" class="footer-a"><li class="footer-li">Services</li></a>
+                    <a href="#" class="footer-a"><li class="footer-li">Terms of Service</li></a>
+                    <a href="#" class="footer-a"><li class="footer-li">Privacy Policy</li></a>
                 </ul>
             </div>
             <div class="contact">
-                <h5>contact us</h5>
-                <p>A108 Adam Street<br>
+                <h5 class="footer-h5">contact us</h5>
+                <p class="footer-p">A108 Adam Street<br>
                 New York, NY 535022<br>
                 United States<br>
                 Phone: +1 5589 55488 55<br>
                 Email: info@example.com</p>
                 <div class="redes">    
-                    <button class="icon"><a href="https://twitter.com/"><i class="fab fa-google-plus-g"></i></a></button>
-                    <button class="icon"><a href="www.facebook.com"><i class="fab fa-google-plus-g"></i></a></button>
-                    <button class="icon"><a href="https://www.instagram.com"><i class="fab fa-google-plus-g"></i></a></button>
-                    <button class="icon"><a href="https://www.google.com"><i class="fab fa-google-plus-g"></i> </a></button>
-                    <button class="icon"><a href="https://ar.linkedin.com/"><i class="fab fa-linkedin"></i></a></button>
+                    <button class="icon"><a href="https://twitter.com/" class="icon-a"><i class="fab fa-google-plus-g"></i></a></button>
+                    <button class="icon"><a href="www.facebook.com" class="icon-a"><i class="fab fa-google-plus-g"></i></a></button>
+                    <button class="icon"><a href="https://www.instagram.com" class="icon-a"><i class="fab fa-google-plus-g"></i></a></button>
+                    <button class="icon"><a href="https://www.google.com" class="icon-a"><i class="fab fa-google-plus-g"></i> </a></button>
+                    <button class="icon"><a href="https://ar.linkedin.com/" class="icon-a"><i class="fab fa-linkedin"></i></a></button>
                 </div>
             </div>
             <div class="newsletter">
-                <h5>OUR NEWSLETTER</h5>
-                <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna veniam enim veniam illum dolore legam minim quorum culpa amet magna export quem marada parida nodela caramase seza.</p>
-                <form action="" method="post">
-                    <input type="email" name="email" id="email">
-                    <input type="submit" value="Subscribe" id="submit">
+                <h5 class="footer-h5">OUR NEWSLETTER</h5>
+                <p class="footer-p">Tamen quem nulla quae legam multos aute sint culpa legam noster magna veniam enim veniam illum dolore legam minim quorum culpa amet magna export quem marada parida nodela caramase seza.</p>
+                <form action="" method="post" class="news-form">
+                    <input type="email" name="email" id="email" class="news-email">
+                    <input type="submit" value="Subscribe" id="submit" class="news-submit">
                 </form>
             </div>
         </div>
     </footer>
     <div class="footer-bottom">  
-        <p>          
+        <p class="footer-bottom-p">          
             © Copyright <strong> Wayne Enterprises</strong>. All Rights Reserved <br>
             Designed by ...
         </p>

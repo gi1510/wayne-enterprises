@@ -352,12 +352,12 @@ body{
             }
             }   
             .img-2{
-               flex: 1;
-               width: 500px;
-               height: 400px;
-               .imagen-2{
+        flex: 1;
+    width: 500px;
+    height: 400px;
+    .imagen-2{
                 @include img-width-height;
-               }
+    }
             }
         
         .seccion-B{
@@ -425,13 +425,14 @@ body{
         color: $letter-color;
         padding-top: 5em;
         padding-bottom: 4em;
-       
         display: flex;
+        // flex-flow: wrap;
+        
         flex-direction: column;
         justify-content: space-around;
         text-align: center;
         background-color: #ecf5ff;
-
+        // background-color: purple;
         .title-head{
             font-size: 36px;
             font-family: $main-font;
@@ -452,8 +453,7 @@ body{
                 align-items: flex-start;
                 margin-left: 67px;
             }
-            .column-wrap{
-                
+            .column-wrap{  
                 display: flex;
                 flex-direction: column;
                 justify-content: space-evenly;
@@ -486,8 +486,7 @@ body{
                     .globe-icon{
                         color: #4680ff;
                         }
-                    ion-icon{
-                        // ver!!!!
+                    .caja-ion-icon{
                         position: relative;
                         right: 50px;
                         text-align: center;
@@ -506,16 +505,16 @@ body{
                 }
                 .caja:hover{
                     transform: translateY(-5px);
-                    h4{
+                    .h4-icon{
                         color: $main-colour;
                     }
                 }
-            }
+            }    
         }
 
         // cierre secciomn3
     }
-    .seccion-4{
+    .section-4{
         background-color: $main-colour;
         font-family: $second-font;
         font-size: 15px;
@@ -536,13 +535,13 @@ body{
                 font-family: $main-font;
             }
         }
-        .container{
+        .choose-container{
             display: flex;
             justify-content: center;
             align-items: center;
             max-width: 1200px;
             margin: 0 auto;
-            .celda{
+            .choose-container-card{
                 flex: 1;
                 background-color: #00458ed0;
                 border-color: #00458f;
@@ -552,30 +551,31 @@ body{
                 text-align: center;
                 color: #fff;
                 transition: 0.3s ease-in-out;
-                height: 100%;
-                .container-celda-i{
+                height: auto;
+                .container-card-i{
                     font-size: 48px;
                     color: #bfddfe;
-                 }
-                .container-celda-h5{
+                }
+                .container-card-h5{
+                    font-family: $main-font;
                     font-size: 22px;
                     font-weight: bold;
                 }
-                .container-celda-p{
+                .container-card-p{
                     padding: 25px 48px;
                 }
-                .container-celda-link{
+                .container-card-link{
                     color: #fff;
                     font-weight: bold;
                 }
             }
-            .celda:hover{
+            .choose-container-card:hover{
                 background-color: #00457ec9;
-                .container-celda-link{
+                .container-card-link{
                     padding-bottom: 3px;
                     border-bottom: 2px solid #00457ec9;                    
                 }
-                .container-celda-link:hover{
+                .container-card-link:hover{
                     padding-bottom: 3px;
                     border-bottom: 2px solid #fff;
                     transition: 0.5s;
@@ -583,29 +583,30 @@ body{
             }
         }     
         .counter-row{
+            max-width: 1140px;
+            margin: 0 auto;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
             
-            .column{
-                // revisar maxwidth!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                max-width: 1000px;
-                margin: 0 auto;
+            .counter-row-column{
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
+                justify-content: space-between;
                 align-items: center;
-                
-                .card{
-                    flex:1;
+                flex:1;
+                .column-card{
+                    
+                    max-width: 255px;
+                    margin: 0 auto;
                     text-align: center;
                     margin: 15px 15px;
                 }
-                .counter-count{
-                    font-family: $main-font;
-                    font-size:48px;
-                    margin-bottom: 0px;
-                }
+                    .counter-count{
+                        font-family: $main-font;
+                        font-size:48px;
+                        margin-bottom: 0px;
+                    }
                 }
     
             }
@@ -674,15 +675,16 @@ body{
             align-items: center;
             justify-content: space-between;
             .contenedor-galeria{
-                 background-color: #41cf2e;
-                //     width: 500px;
-                //     height: 350px;
+                width: 350px;
+                height: 250px;
+                padding-top: 32px;
                 .img-s5{
                     width: 350px;
                     height: 250px;
                     margin-bottom: 53px;
                     overflow: hidden;
                     border-radius: 9px;
+                    z-index: 1;
                     .img-portfolio{
                         @include img-width-height;
                     }
@@ -692,13 +694,15 @@ body{
                     height: 250px;
                     border-radius: 9px;
                     position: relative;
+                    top: -303px;
+                    // consuktar este desplazamiento si es valido....suena rarito
                     background-color: #00458f59;
-                    top: -25px;
-                    left: -350px;
                     display: flex;
-                    flex-flow: wrap;
+                    flex-direction: column;
+                    // flex-flow: wrap;
                     align-items: center;
-                    opacity: 0;               
+                    opacity: 0; 
+                    z-index: 99;              
                         .tittle-info{
                             color: white;
                             font-family: $main-font;
@@ -731,14 +735,14 @@ body{
                             background-color: #007bff9f;
                             transition: 0.2s;
                         }
-                                 
                 }
                 .img-s5-info:hover{               
                     opacity: 100;
+                    z-index: 99;
+                    transition: 0.2s;
+                    
                 }
             }
-
-         
         }  
     }
 
@@ -795,10 +799,51 @@ body{
             .row-wrap{
             max-width: 700px;
             margin: 0 auto;
+            height: auto;
         }
 // cierre sec3
         }
-       
+        .section-4{
+            .choose-container{
+                display: block;
+                max-width: 700px;
+                .choose-container-card{
+                    margin: 20px 0;
+                    padding: 25px 0;
+                    .container-card-h5{
+                        margin: 0;
+                    }
+                }
+            }
+            .counter-row{
+
+// section4 no responde counter sectiom
+
+
+                max-width: 700px;
+
+                display: flex;
+                flex-flow: wrap; 
+                .counter-row-column{
+                    width: 50%;
+                }
+            }
+            
+
+
+        }
+        .seccion-5{
+            .galeria-row-wrap{
+                max-width: 700px;
+                margin: 0 auto;
+                .contenedor-galeria{ 
+                .img-s5{
+                    width: 330px;
+                    height: 250px;
+                }
+            }
+            }
+        }
 // cierre@    
 }
 
@@ -922,9 +967,124 @@ body{
     .a-gal:hover {
         color: $second-colour;
 
+@media (max-width: 360px) {
+    .section-1{
+        .section-1-container{
+            display: flex;
+            flex-direction: column;
+            flex-flow: column-reverse;
+            text-align: center;
+            max-width: 330px;
+            margin: 0 auto;
+            .info-banner{
+                .side-buttons{
+                    display: flex;
+                    flex-direction: column;
+                    // justify-content: center;
+                    align-items: center;
+                    .boton-inactivo{
+                        margin-top: 33px;
+                        margin-left: -23px;
+                    }
+                }
+            }
+            .img-1-banner{
+                width: 100%;
+            }
+        }
+    }
+    .section-2{
+        max-width: 330px;
+        margin: 0 auto;
+        .seccion-A{
+            .img-2{
+                width: 330px;
+                height: 250px;
+            }
+// hacer mixin de img y ver de poner el mismo class en todas las resolciones
+        }
+        .seccion-B{
+            .img-3{
+                width: 330px;
+                height: 250px;
+            }
+        }   
+            .title-side-text{ 
+                .parrafo-sec{
+                padding-left: 0px;
+            } 
+            }
+        .seccion-C{
+            .imagen-4{
+                // ver no toma tama;o del div
+                width: 330px;
+                height: 250px;
+            }
+        }
+        // cierresexion2?
+    }
+    .seccion-3{
+        .row-wrap{
+            display: block;
+            max-width: 330px;
+            margin: 0 auto;
+            height: auto;
+            .column-wrap{
+                display: block;
+            }
+            #col-wrap-2{
+                margin: 0px;
+            }
+        }
+
+        // cierre sec 3
+    }
+    .section-4{
+        .choose-container{
+            max-width: 330px;
+            margin: 0 auto;
+        }
+    
+    // es el text align   ++????ver tama;o de titulochoose y su p
+        //   cierre4
+
+    }
+    .seccion-5{
+        max-width: 330px;
+        margin: 0 auto;
+        header{
+            .menu-portfolio{
+                .menu-button{
+                    list-style: none;
+                    // cambiar tama;o de los botones ul
+                    margin: 0 4px;
+                    .little-button-all{
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+        .galeria-row-wrap{
+            .contenedor-galeria{  
+                width: 330px;
+                height: 250px;
+                .img-s5{
+                    width: 330px;
+                    height: 250px;
+                }
+                .img-s5-info{
+                    width: 330px;
+                    height: 250px;
+                }
+            
+            }
+        }
+    }
 
 
-
+    
+}
+// carla seccion clients
     .clients {
         @include centrado;
         background-color:$light-colour;
@@ -1391,8 +1551,3 @@ body{
         }
     }
 }
-// cuestiones a revisar:
-// los margenes que se dejan
-// los line height
-
-   

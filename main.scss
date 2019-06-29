@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap');
 
 $main-colour: #1445b3;
 $second-colour: #007bff;
@@ -8,6 +8,36 @@ $light-font-colour:#eee;
 $background-colour: white;
 $main-font: "Montserrat", sans-serif;
 $second-font: "Open Sans", sans-serif;
+$letter-color:#283d50;
+@mixin flex-reflex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin img-width-height {
+    width: 100%;
+    height: auto;
+    
+}
+@mixin button-active{
+    border-color: $second-colour;
+    background-color: $second-colour;
+    color:#fff;
+}
+@mixin button-disable{
+    border-color: #fff;
+    background-color: $main-colour;
+    color:#fff;
+}
+@mixin side-buttons{
+    border: 2px solid white;
+    border-radius: 30px;
+    font-family: $main-font;
+    font-size: 14px;
+    padding: 10px 32px;
+    color:#fff; 
+    letter-spacing: 1px;
+}
 
 @mixin centrado {
     display: flex;
@@ -189,67 +219,114 @@ body{
         }
     }
             
-    .testimonials {
-        @include centrado;
-        padding: 60px 0;
-        box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
-        background-color: $light-colour;
-            .header{
-                @include centrado;
-                @include tit-sub;
-                margin-bottom: 40px;
-            } 
-            .carrousel {
-                display: flex;   
-                width: 730px;
-                height: 132px;
-                padding: 0;
-                overflow: hidden;
-                margin: 0 auto;
-                .opinion {
+    .section-1{
+        
+        background-color:$main-colour;
+        padding-top: 5em;
+        padding-bottom: 4em;       
+        .section-1-container{
+            @include flex-reflex;
+            flex-flow: wrap;
+            max-width: 1140px;
+            margin: 0 auto;
+            .img-1-banner{
+                flex: 1;
+                width: 500px;
+                height: 280px;
+                .imagen-banner{
+                    @include img-width-height;
+                    }
+                } 
+            .info-banner{
+                flex: 1;
+                color: $background-colour;
+                font-size: 33px;
+                font-weight: 700;
+                font-family: $main-font;
+                .solutions{
+                    color: #74b5fc;
+                    text-decoration: underline;
+                }       
+                .side-buttons{
                     display: flex;
-                    width: 730px;
-                    flex-shrink: 0;
-                    scroll-behavior: smooth;
-                        .test-img {
-                            width: 125px;
-                            border: 4px solid #fff;
-                            border-radius: 50%;
-                            overflow: hidden;
-                            .t-img {
-                                width: 100%;
-                                height: auto;
-                            }
+                    justify-content: flex-start;
+                    align-items: center;
+                    .boton-activo{
+                        @include side-buttons;
+                        @include button-active;
+                        margin-right: 24px;
+                    }
+                    .boton-activo:hover{
+                        @include button-disable;
+                    }                    
+                    .boton-inactivo{
+                        @include side-buttons;
+                        @include button-disable;
+                    }
+                    .boton-inactivo:hover{
+                        @include button-active;
+                    }
+                }
+            }
+
+        }    
+
+            // cierre .section-1-container
+    }
+    .section-2{
+        // hacer mixin secciones
+        font-family: $second-font;
+        color: $letter-color;
+        padding-top: 5em;
+        padding-bottom: 4em;
+        max-width: 1140px;
+        margin: 0 auto;
+        .section-2-header{
+            text-align: center;
+            margin-bottom: 48px;
+            .title-head-2{
+                font-size: 36px;
+                font-family: $main-font;
+            }
+
+        }
+        .seccion-A{
+            max-width: 1200px;
+            margin:0 auto;
+            @include flex-reflex; 
+            
+            .side-text{
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                .icon-flex{
+                    @include flex-reflex;
+                    
+                    .icon-seccion-A{
+                        text-align: center;
+                        color: $second-colour;
+                        border: 2px solid $second-colour;
+                        border-radius: 50%;
+                        padding: 16px 20px;
+                        font-size: 24px;
                         }
-                        .test-info {
-                            padding: 10px;
-                            width: 80%;
-                            scroll-behavior: smooth;
-                        }
-                        .carr-h3 {
+                    .text-icon{
+                        padding-left: 12px;
+                        font-size: 14px;
+                        .title-h4-2 {
+                            font-size: 18px;
                             font-family: $main-font;
-                            font-size: 20px;
-                            font-weight: bold;
-                            margin: 0px 0 5px 0;
-                            color: #111;
-                            line-height: 0.5
-                        }
-                        .carr-h4 {
-                            font-family: $second-font;
-                            font-size: 14px;
-                            color: #999;
-                            font-weight: 400;
-                            line-height: 0;
-                        }
-                        .carr-p {
-                            font-family: $second-font;
-                            font-style: italic;
-                            font-size: 15px;
-                            color: #444;
-                            font-weight: 400;
-                            line-height: 1.5;
+                        }   
                         }
                     }
+                .icon-flex:hover{
+                    .icon-seccion-A{
+                        color:#fff;
+                        background-color: $second-colour;
+                        transition: all 0.5s ease-in-out;
+                        }
+                    }                              
                 }
             .bullets {
                 display: flex;
@@ -273,95 +350,580 @@ body{
                     }
                 }
             }
+            }   
+            .img-2{
+               flex: 1;
+               width: 500px;
+               height: 400px;
+               .imagen-2{
+                @include img-width-height;
+               }
+            }
+        
+        .seccion-B{
+            max-width: 1140px;
+            margin: 0 auto;
+            @include flex-reflex;
+            padding-top: 40px;
+            .img-3{
+                flex: 1;
+                width: 400px;
+                height: 350px;
+                .imagen-3{
+                    @include img-width-height;
+                } 
+            }
+            .side-text-B{
+                flex: 1;
+                .title-side-text{
+                    font-family: $main-font;
+                    font-size: 24px;
+                }
+                .parrafo-sec{
+                    padding-bottom: 24px;
+                    padding-left: 20px
+                }
+            }
+        }
+        .seccion-C{
+            max-width: 1140px;
+            margin: 0 auto;
+            @include flex-reflex;
+            padding-top: 40px;
+            .img-4{
+                flex: 1;
+                width: 400px;
+                height: 350px;
+                .imagen-4{
+                    @include img-width-height;
+
+                }
+
+            }
+            .side-text{
+                flex: 1;
+                .title-side-text{
+                    font-family: $main-font;
+                    font-size: 24px;
+                }
+                .parrafo-sec{
+                    padding-bottom: 24px;
+                    padding-right: 20px
+                }
+            }
+
+        }        
+            // hacer mixi n secciones
+
+
+
+
+        // cierre sec2
+    }
+    .seccion-3{
+        font-family: $second-font;
+        color: $letter-color;
+        padding-top: 5em;
+        padding-bottom: 4em;
+       
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        text-align: center;
+        background-color: #ecf5ff;
+
+        .title-head{
+            font-size: 36px;
+            font-family: $main-font;
+            margin-bottom: 48px;
+        }
+
+        .row-wrap{
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-evenly;
+            text-align: left;
+            #column-wrap-1{
+                align-items: flex-end;
+                margin-right: 67px;
+            }
+            #col-wrap-2{
+                align-items: flex-start;
+                margin-left: 67px;
+            }
+            .column-wrap{
+                
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: flex-end;
+                .caja{
+                    @include flex-reflex;
+                    background-color: #fff;
+                    border-radius: 10px;
+                    padding: 30px;
+                    margin: 30px 0px;
+                    overflow: hidden;
+                    box-shadow: 1px 5px 5px rgba(68, 88, 144, 0.1);
+                    transition: all 0.5s ease-in-out;
+                    
+                    .analytics-icon{
+                        color: #ff689b;
+                        }
+                    .copy-icon{
+                        color: #3fcdc7;
+                        }
+                    .time-icon{
+                        color: #d6ff22;
+                        }
+                    .bookmark-icon{
+                        color: #e9bf06;
+                        }
+                    .speed-icon{
+                        color: #41cf2e;
+                        }
+                    .globe-icon{
+                        color: #4680ff;
+                        }
+                    ion-icon{
+                        // ver!!!!
+                        position: relative;
+                        right: 50px;
+                        text-align: center;
+                        font-size: 64px;
+                        }
+                    
+                    .p-icon{
+                        font-size: 14px;
+                        line-height: 14px;
+                    }
+                    .h4-icon{
+                        font-size: 18px;
+                        font-family: $main-font;
+                    } 
+                    
+                }
+                .caja:hover{
+                    transform: translateY(-5px);
+                    h4{
+                        color: $main-colour;
+                    }
+                }
+            }
+        }
+
+        // cierre secciomn3
+    }
+    .seccion-4{
+        background-color: $main-colour;
+        font-family: $second-font;
+        font-size: 15px;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 5em 0em;
+        header{
+            width: 50%;
+            text-align: center;
+            padding-bottom: 60px;
+            .p-header-s4{
+                padding: 0px 40px;
+            }
+            .title-head{
+                font-size: 36px;
+                font-family: $main-font;
+            }
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            .celda{
+                flex: 1;
+                background-color: #00458ed0;
+                border-color: #00458f;
+                border-radius: 10px;
+                margin: 0 15px;
+                padding: 15px 0;
+                text-align: center;
+                color: #fff;
+                transition: 0.3s ease-in-out;
+                height: 100%;
+                .container-celda-i{
+                    font-size: 48px;
+                    color: #bfddfe;
+                 }
+                .container-celda-h5{
+                    font-size: 22px;
+                    font-weight: bold;
+                }
+                .container-celda-p{
+                    padding: 25px 48px;
+                }
+                .container-celda-link{
+                    color: #fff;
+                    font-weight: bold;
+                }
+            }
+            .celda:hover{
+                background-color: #00457ec9;
+                .container-celda-link{
+                    padding-bottom: 3px;
+                    border-bottom: 2px solid #00457ec9;                    
+                }
+                .container-celda-link:hover{
+                    padding-bottom: 3px;
+                    border-bottom: 2px solid #fff;
+                    transition: 0.5s;
+                }
+            }
+        }     
+        .counter-row{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            .column{
+                // revisar maxwidth!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                max-width: 1000px;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                
+                .card{
+                    flex:1;
+                    text-align: center;
+                    margin: 15px 15px;
+                }
+                .counter-count{
+                    font-family: $main-font;
+                    font-size:48px;
+                    margin-bottom: 0px;
+                }
+                }
+    
+            }
+
+    }
+    .seccion-5{
+        font-family: $second-font;
+        color: $letter-color;
+        padding-top: 5em;
+        padding-bottom: 4em;
+        text-align: center;
+        header{
+            .title-head{
+                font-size: 36px;
+                font-family: $main-font;
+            }
+            .menu-portfolio{
+                font-family: $main-font;
+                font-size: 12px;
+                color: #fff;
+                text-align: center;
+                .menu-button{
+                    display: flex;
+                    justify-content: center;
+                    // ::marker en  web___
+
+                    .little-button{
+                        margin: 20px 15px;
+                        background-color: #ecf5ff;
+                        color: #007bff;
+                        list-style: none;
+                        border-radius: 50px;  
+                        padding: 6px 20px;
+                        font-size: 12px;
+                        line-height: 20px;
+                        // hacer mixin 6sickitems
+                    }
+
+                    .little-button:hover{
+                        
+                        background-color: $second-colour;
+                        color: #fff;
+                        
+                    }
+                    .little-button-all{
+                        background-color: $second-colour;
+                        color: #fff;
+                        list-style: none;
+                        border-radius: 50px;  
+                        padding: 6px 20px;
+                        font-size: 12px;
+                        line-height: 20px;
+                        // hacer mixin 6sickitems
+                    }
+            }
+                
+            }
+        }
+        
+            
+        .galeria-row-wrap{
+            max-width: 1140px;               
+            margin: 0 auto;
+            display: flex;
+            flex-flow: wrap;
+            align-items: center;
+            justify-content: space-between;
+            .contenedor-galeria{
+                 background-color: #41cf2e;
+                //     width: 500px;
+                //     height: 350px;
+                .img-s5{
+                    width: 350px;
+                    height: 250px;
+                    margin-bottom: 53px;
+                    overflow: hidden;
+                    border-radius: 9px;
+                    .img-portfolio{
+                        @include img-width-height;
+                    }
+                }
+                .img-s5-info{
+                    width: 350px;
+                    height: 250px;
+                    border-radius: 9px;
+                    position: relative;
+                    background-color: #00458f59;
+                    top: -25px;
+                    left: -350px;
+                    display: flex;
+                    flex-flow: wrap;
+                    align-items: center;
+                    opacity: 0;               
+                        .tittle-info{
+                            color: white;
+                            font-family: $main-font;
+                            font-size: 22px;
+                            font-weight: 700;
+                            .a-tittle{
+                                color: white;
+                            }
+                            .a-tittle:hover{
+                                color: $second-colour;
+                                transition: 0.2S;
+                            }
+                        }
+                        .p-info{
+                            color: #e2effe;
+                            font-weight: 500;
+                            font-size: 14px;
+    
+                        }
+                        .i-box{
+                            width:2px;
+                            height: 2px;
+                            color: #fff;
+                            background-color: $second-colour;
+                            border-radius: 50%;
+                            padding: 5px 7px;
+                            margin: 6px;
+                        }
+                        .i-box:hover{
+                            background-color: #007bff9f;
+                            transition: 0.2s;
+                        }
+                                 
+                }
+                .img-s5-info:hover{               
+                    opacity: 100;
+                }
+            }
+
+         
+        }  
     }
 
-    .team{
-        @include centrado;
-        padding: 60px 0;
-        box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+    @media (max-width: 768px){
+        .section-1{
+            .section-1-container{
+                display: block;
+                text-align: center;
+                max-width: 700px;
+                margin: 0 auto;
+            }
+        }
+        .section-2{
+            .seccion-A{
+                // display: block;
+                display: flex;
+                flex-direction: column-reverse;
+                align-items: start;
+                max-width: 700px;
+                margin: 0 auto;
+                .imagen-2{
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            .seccion-B{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                max-width: 700px;
+                margin: 0 auto;
+                // display: block;
+                .imagen-3{ 
+                width: 100%;
+                height: auto;
+                }
+            }
+            .seccion-C{
+                display: flex;
+                flex-direction: column-reverse;
+                align-items: center;
+                max-width: 700px;
+                margin: 0 auto;
+                .imagen-4{
+                    width: 100%;
+                    height: auto;
+
+                }
+
+            }
+// cierre ecci2
+        }
+        .seccion-3{
+            .row-wrap{
+            max-width: 700px;
+            margin: 0 auto;
+        }
+// cierre sec3
+        }
+       
+// cierre@    
+}
+
+// body cierre
+}
+// TESTIMON
+.testimonials {
+    @include centrado;
+    padding: 60px 0;
+    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+    background-color: $light-colour;
         .header{
             @include centrado;
             @include tit-sub;
+            margin-bottom: 40px;
         } 
-        .h4-gal {
-            font-family: $main-font;
-            font-weight: 700;
-            margin-bottom: 3px;
-            line-height: 0;
-            font-size: 18px;
-            color: #fff;
-        }
-        .text-gal{
-            font-family: $second-font;
-            font-style: italic;
-            font-size: 13px;
-            color: #fff;
-        }
-        .social {
-            font-size: 18px;
-            margin: 10px;
-            .a-gal {
-                text-decoration: none;
-                margin: 3px;
-            }              
-            .a-gal:link {
-                color: white;
-            }              
-            .a-gal:visited {
-                color:white;
-            }              
-            .a-gal:hover {
-                color: $second-colour;
+        .carrousel {
+            display: flex;   
+            width: 730px;
+            height: 132px;
+            padding: 0;
+            overflow: hidden;
+            margin: 0 auto;
+            .opinion {
+                display: flex;
+                width: 730px;
+                flex-shrink: 0;
+                scroll-behavior: smooth;
+                    .test-img {
+                        width: 125px;
+                        border: 4px solid #fff;
+                        border-radius: 50%;
+                        overflow: hidden;
+                        .t-img {
+                            width: 100%;
+                            height: auto;
+                        }
+                    }
+                    .test-info {
+                        padding: 10px;
+                        width: 80%;
+                        scroll-behavior: smooth;
+                    }
+                    .carr-h3 {
+                        font-family: $main-font;
+                        font-size: 20px;
+                        font-weight: bold;
+                        margin: 0px 0 5px 0;
+                        color: #111;
+                        line-height: 0.5
+                    }
+                    .carr-h4 {
+                        font-family: $second-font;
+                        font-size: 14px;
+                        color: #999;
+                        font-weight: 400;
+                        line-height: 0;
+                    }
+                    .carr-p {
+                        font-family: $second-font;
+                        font-style: italic;
+                        font-size: 15px;
+                        color: #444;
+                        font-weight: 400;
+                        line-height: 1.5;
+                    }
+                }
             }
-        }
-        .galeria-batman {
+        .bullets {
             display: flex;
-            .pic-1 {
-                background-image: url(https://newbiz-master-uqgespkghu.now.sh/img/team-01.jpg);
-                @include team-photo;
-            }
-            .pic-1:hover .overlay{
-                transform: translate(0px);
-                opacity: 1;
-            }
-            .pic-1:hover{
-                opacity: 0.9;        
-            }
-            .pic-2 {
-                background-image: url(https://newbiz-master-uqgespkghu.now.sh/img/team-02.jpg);
-                @include team-photo;
-            }
-            .pic-2:hover .overlay{
-                transform: translate(0px);
-                opacity: 1;
-            }
-            .pic-2:hover{
-                opacity: 0.9;        
-            }
-            .pic-3 {
-                background-image: url(https://newbiz-master-uqgespkghu.now.sh/img/team-03.jpg);
-                @include team-photo;
-            }
-            .pic-3:hover .overlay{
-                transform: translate(0px);
-                opacity: 1;
-            }
-            .pic-3:hover{
-                opacity: 0.9;        
-            }
-            .pic-4 {
-                background-image: url(https://newbiz-master-uqgespkghu.now.sh/img/team-04.jpg);
-                @include team-photo;
-            }
-            .pic-4:hover .overlay{
-                transform: translate(0px);
-                opacity: 1;
-            }
-            .pic-4:hover{
-                opacity: 0.9;        
+            list-style: none;
+            padding-inline-start: 0;
+            margin-block-start: 1em;
+            margin-block-end: 0;
+            .bullet-1 {
+                width: 22px;
+                .bull-a:link  {
+                    color: #ddd;
+                }
+                .bull-a:visited {
+                    color: #ddd;
+                }
+                .bull-a:hover .fas-bull {
+                    color: $second-colour;
+                }
+                .fas-bull {
+                    font-size: 12px;
+                }
             }
         }
-    }
+}
+
+.team{
+    @include centrado;
+    padding: 60px 0;
+    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+    .header{
+        @include centrado;
+        @include tit-sub;
+    } 
+    .h4-gal {
+.text-gal{
+    font-family: $second-font;
+    font-style: italic;
+    font-size: 13px;
+    color: #fff;
+}
+.social {
+    font-size: 18px;
+    margin: 10px;
+    .a-gal {
+        text-decoration: none;
+        margin: 3px;
+    }              
+    .a-gal:link {
+        color: white;
+    }              
+    .a-gal:visited {
+        color:white;
+    }              
+    .a-gal:hover {
+        color: $second-colour;
+
+
+
 
     .clients {
         @include centrado;
@@ -829,5 +1391,8 @@ body{
         }
     }
 }
+// cuestiones a revisar:
+// los margenes que se dejan
+// los line height
 
-
+   

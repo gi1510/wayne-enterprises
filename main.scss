@@ -1343,12 +1343,17 @@ body{
                                 flex-direction: column;
                                 .formulario-label {
                                     margin: 5px 0;
+                                    padding: 0;
                                 }
                             }
                             .form-text {
                                 .formulario-label {
                                     margin: 5px 0;
                                 }
+                            }
+                            .formm-botonsend {
+                                padding-top: 10px;
+                            }
                             }
                         }
                     }
